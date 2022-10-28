@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "hotkey": "F5",
+    "src": "slot/slot_empty.webp",
+    "name": "停止捲軸功能",
+    "description": ""
+  },
+  {
+    "id": 1,
+    "hotkey": "F6",
+    "src": "slot/slot_whiteArmor.webp",
+    "name": "對盔甲施法的卷軸",
+    "description": "能增加防具的防禦力"
+  },
+  {
+    "id": 2,
+    "hotkey": "F7",
+    "src": "slot/slot_blessedArmor.webp",
+    "name": "對盔甲施法的卷軸",
+    "description": "強化成功可將裝備強化數值(+1~3)"
+  },
+  {
+    "id": 3,
+    "hotkey": "F8",
+    "src": "slot/slot_cursedArmor.webp",
+    "name": "對盔甲施法的卷軸",
+    "description": "強化成功可將裝備強化數值(-1)"
+  },
+  {
+    "id": 4,
+    "hotkey": "F9",
+    "src": "slot/slot_empty.webp",
+    "name": "停止捲軸功能",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "hotkey": "F10",
+    "src": "slot/slot_whiteWeapon.webp",
+    "name": "對武器施法的卷軸",
+    "description": "能增加武器的攻擊力"
+  },
+  {
+    "id": 6,
+    "hotkey": "F11",
+    "src": "slot/slot_blessedWeapon.webp",
+    "name": "對武器施法的卷軸",
+    "description": "強化成功可將武器強化數值(+1~3)"
+  },
+  {
+    "id": 7,
+    "hotkey": "F12",
+    "src": "slot/slot_cursedWeapon.webp",
+    "name": "對武器施法的卷軸",
+    "description": "強化成功可將武器強化數值(-1)"
+  }
+]
