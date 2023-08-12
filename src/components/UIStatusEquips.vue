@@ -168,13 +168,16 @@ const getDataForAlgorithm = (equip, event) => {
 
 <style lang="scss" scoped>
 @use "../scss/common.scss";
+
 .uiStatusEquips {
   position: absolute;
   inset: 0;
   z-index: 1; // to make equipInfo override tree img in mage role situation
+
   &:hover {
     cursor: v-bind(changeCursor());
   }
+
   .equip {
     position: absolute;
     width: 11%;
@@ -231,6 +234,7 @@ const getDataForAlgorithm = (equip, event) => {
         &::after {
           color: v-bind(assignColorToEquipText(5));
         }
+
         top: 31.5%;
         left: 70.5%;
         z-index: 1;

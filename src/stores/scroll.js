@@ -46,7 +46,7 @@ export const useScrollStore = defineStore("scroll", () => {
     const reg = /(Armor)|(Weapon)/g;
     return reg.exec(targetScroll.value)[0].toLocaleLowerCase();
   };
-  const clearClickScorllTimer = () => {
+  const clearClickScrollTimer = () => {
     clearInterval(clickTimerId.value);
   };
   return {
@@ -56,6 +56,6 @@ export const useScrollStore = defineStore("scroll", () => {
     changeScroll,
     getScrollType,
     getScrollEquiplType,
-    clearClickScorllTimer,
+    clearClickScrollTimer,
   };
 });

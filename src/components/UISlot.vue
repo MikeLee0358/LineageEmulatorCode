@@ -28,13 +28,13 @@ const handleClick = (e) => {
     if (e.target.tagName !== "IMG") return;
     return e.target.parentElement.classList[0]; //F5 ~F12
   };
-  storeScroll.clearClickScorllTimer();
+  storeScroll.clearClickScrollTimer();
   handleScrollStateAndInfo(getScrollClass(e), true);
 };
 const handleKeyboard = (e) => {
   e.preventDefault();
   e.stopPropagation();
-  storeScroll.clearClickScorllTimer();
+  storeScroll.clearClickScrollTimer();
   handleScrollStateAndInfo(e.key);
 };
 
@@ -104,6 +104,7 @@ onBeforeRouteLeave(() =>
     color: v-bind("cssColor");
     @extend %infoTemplateStyle;
   }
+
   .F5,
   .F9 {
     opacity: 0;

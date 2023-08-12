@@ -19,12 +19,14 @@ const showAlert = () => {
 
 <style lang="scss" scoped>
 @use "../scss/common.scss";
+
 .loginPage {
   position: relative;
   width: 100%;
   height: 100%;
   background-image: url("/src/assets/login/login_background.webp");
   @extend %backgroundCoverRound;
+
   .login {
     position: absolute;
     background-image: url("@/assets/login/login_btn.webp");

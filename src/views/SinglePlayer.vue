@@ -28,7 +28,7 @@ onBeforeRouteLeave(() => {
   //reset to default
   storeKnight.game.isDeathKnight = false;
   storeKnight.clearRepeatTalkChatEventTimer();
-  storeScroll.clearClickScorllTimer();
+  storeScroll.clearClickScrollTimer();
   storeScroll.targetScroll = null;
   storeChat.cleanChat();
   storeUI.ui.btnBox = "close";
@@ -38,6 +38,7 @@ onBeforeRouteLeave(() => {
 
 <style lang="scss">
 @use "../scss/common.scss";
+
 .singlePlayerContainer {
   width: 100%;
   height: 100%;
