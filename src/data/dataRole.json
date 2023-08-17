@@ -1,919 +1,919 @@
 {
-  "royal": {
-    "basic": {
-      "lv": 1,
-      "exp": "0.00%",
-      "hp": 34,
-      "mp": 2,
-      "ac": 10,
-      "mr": 10,
-      "er": 1,
-      "str": 18,
-      "dex": 10,
-      "con": 10,
-      "int": 11,
-      "wis": 10,
-      "cha": 18
+    "royal": {
+        "basic": {
+            "lv": 1,
+            "exp": "0.00%",
+            "hp": 34,
+            "mp": 2,
+            "ac": 10,
+            "mr": 10,
+            "er": 1,
+            "str": 18,
+            "dex": 10,
+            "con": 10,
+            "int": 11,
+            "wis": 10,
+            "cha": 18
+        },
+
+        "equips": [
+            {
+                "id": 0,
+                "name": "大馬士革刀",
+                "src": "royal/equip_weapon.webp",
+                "category": "weapon",
+                "attack": {
+                    "small": 10,
+                    "large": 11
+                },
+                "grip": "單手武器",
+                "value": 0,
+                "safetyValue": 6,
+                "material": "鐵",
+                "weight": 45,
+                "occupation": "[王族][騎士][妖精][黑暗妖精]",
+                "feature": "不會損壞"
+            },
+            {
+                "id": 1,
+                "name": "抗魔法頭盔",
+                "src": "royal/equip_helmet.webp",
+                "category": "armor helmet",
+                "armor": 2,
+                "mr": 4,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "鐵",
+                "weight": 35,
+                "occupation": "[所有職業]",
+                "feature": "魔法防禦額外點數"
+            },
+            {
+                "id": 2,
+                "name": "妖魔戰士護身符",
+                "src": "royal/equip_amulet.webp",
+                "category": "jewelry amulet",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "寶石",
+                "weight": 5,
+                "occupation": "[所有職業]",
+                "feature": "體力上限+20"
+            },
+            {
+                "id": 3,
+                "name": "T恤",
+                "src": "royal/equip_shirt.webp",
+                "category": "armor shirt",
+
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 5,
+                "occupation": "[所有職業]",
+                "feature": null
+            },
+            {
+                "id": 4,
+                "name": "抗魔法鏈甲",
+                "src": "royal/equip_bodyArmor.webp",
+                "category": "armor bodyArmor",
+                "armor": 5,
+                "mr": 4,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "鐵",
+                "weight": 300,
+                "occupation": "[王族][騎士][妖精][黑暗妖精]",
+                "feature": "魔法防禦額外點數"
+            },
+            {
+                "id": 5,
+                "name": "抗魔法斗篷",
+                "src": "royal/equip_cloak.webp",
+                "category": "armor cloak",
+                "armor": 1,
+                "mr": 10,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 10,
+                "occupation": "[所有職業]",
+                "feature": "魔法防禦額外點數"
+            },
+            {
+                "id": 6,
+                "name": "瞬間移動控制戒指",
+                "src": "royal/equip_ring.webp",
+                "category": "jewelry left-ring",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
+            },
+            {
+                "id": 7,
+                "name": "歐吉皮帶",
+                "src": "royal/equip_belt.webp",
+                "category": "jewelry belt",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "皮",
+                "weight": 50,
+                "occupation": "[所有職業]",
+                "feature": "增加負重+1000"
+            },
+            {
+                "id": 8,
+                "name": "反射之盾",
+                "src": "royal/equip_shield.webp",
+                "category": "armor shield",
+                "armor": 2,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "銀",
+                "weight": 50,
+                "occupation": "[王族][騎士][妖精][黑暗妖精]",
+                "feature": null
+            },
+            {
+                "id": 9,
+                "name": "力量手套",
+                "src": "royal/equip_gloves.webp",
+                "category": "armor gloves",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "皮",
+                "weight": 18,
+                "occupation": "[所有職業]",
+                "isAttrEquip": true,
+                "attribute": {
+                    "str": 2
+                },
+                "feature": "力量 +2"
+            },
+            {
+                "id": 10,
+                "name": "形體控制戒指",
+                "src": "royal/equip_ring.webp",
+                "category": "jewelry right-ring",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
+            },
+            {
+                "id": 11,
+                "name": "鋼鐵長靴",
+                "src": "royal/equip_boots.webp",
+                "category": "armor boots",
+                "armor": 3,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "鐵",
+                "weight": 50,
+                "occupation": "[所有職業]",
+                "feature": null
+            }
+        ]
     },
-
-    "equips": [
-      {
-        "id": 0,
-        "name": "大馬士革刀",
-        "src": "royal/equip_weapon.webp",
-        "category": "weapon",
-        "attack": {
-          "small": 10,
-          "large": 11
+    "knight": {
+        "basic": {
+            "lv": 1,
+            "exp": "0.00%",
+            "hp": 86,
+            "mp": 1,
+            "ac": 10,
+            "mr": 0,
+            "er": 2,
+            "str": 22,
+            "dex": 12,
+            "con": 14,
+            "int": 9,
+            "wis": 8,
+            "cha": 12
         },
-        "grip": "單手武器",
-        "value": 0,
-        "safetyValue": 6,
-        "material": "鐵",
-        "weight": 45,
-        "occupation": "[王族][騎士][妖精][黑暗妖精]",
-        "feature": "不會損壞"
-      },
-      {
-        "id": 1,
-        "name": "抗魔法頭盔",
-        "src": "royal/equip_helmet.webp",
-        "category": "armor helmet",
-        "armor": 2,
-        "mr": 4,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "鐵",
-        "weight": 35,
-        "occupation": "[所有職業]",
-        "feature": "魔法防禦額外點數"
-      },
-      {
-        "id": 2,
-        "name": "妖魔戰士護身符",
-        "src": "royal/equip_amulet.webp",
-        "category": "jewelry amulet",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "寶石",
-        "weight": 5,
-        "occupation": "[所有職業]",
-        "feature": "體力上限+20"
-      },
-      {
-        "id": 3,
-        "name": "T恤",
-        "src": "royal/equip_shirt.webp",
-        "category": "armor shirt",
 
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 5,
-        "occupation": "[所有職業]",
-        "feature": null
-      },
-      {
-        "id": 4,
-        "name": "抗魔法鏈甲",
-        "src": "royal/equip_bodyArmor.webp",
-        "category": "armor bodyArmor",
-        "armor": 5,
-        "mr": 4,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "鐵",
-        "weight": 300,
-        "occupation": "[王族][騎士][妖精][黑暗妖精]",
-        "feature": "魔法防禦額外點數"
-      },
-      {
-        "id": 5,
-        "name": "抗魔法斗篷",
-        "src": "royal/equip_cloak.webp",
-        "category": "armor cloak",
-        "armor": 1,
-        "mr": 10,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 10,
-        "occupation": "[所有職業]",
-        "feature": "魔法防禦額外點數"
-      },
-      {
-        "id": 6,
-        "name": "瞬間移動控制戒指",
-        "src": "royal/equip_ring.webp",
-        "category": "jewelry left-ring",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
-      },
-      {
-        "id": 7,
-        "name": "歐吉皮帶",
-        "src": "royal/equip_belt.webp",
-        "category": "jewelry belt",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "皮",
-        "weight": 50,
-        "occupation": "[所有職業]",
-        "feature": "增加負重+1000"
-      },
-      {
-        "id": 8,
-        "name": "反射之盾",
-        "src": "royal/equip_shield.webp",
-        "category": "armor shield",
-        "armor": 2,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "銀",
-        "weight": 50,
-        "occupation": "[王族][騎士][妖精][黑暗妖精]",
-        "feature": null
-      },
-      {
-        "id": 9,
-        "name": "力量手套",
-        "src": "royal/equip_gloves.webp",
-        "category": "armor gloves",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "皮",
-        "weight": 18,
-        "occupation": "[所有職業]",
-        "isAttrEquip": true,
-        "attribute": {
-          "str": 2
-        },
-        "feature": "力量 +2"
-      },
-      {
-        "id": 10,
-        "name": "形體控制戒指",
-        "src": "royal/equip_ring.webp",
-        "category": "jewelry right-ring",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
-      },
-      {
-        "id": 11,
-        "name": "鋼鐵長靴",
-        "src": "royal/equip_boots.webp",
-        "category": "armor boots",
-        "armor": 3,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "鐵",
-        "weight": 50,
-        "occupation": "[所有職業]",
-        "feature": null
-      }
-    ]
-  },
-  "knight": {
-    "basic": {
-      "lv": 1,
-      "exp": "0.00%",
-      "hp": 86,
-      "mp": 1,
-      "ac": 10,
-      "mr": 0,
-      "er": 2,
-      "str": 22,
-      "dex": 12,
-      "con": 14,
-      "int": 9,
-      "wis": 8,
-      "cha": 12
+        "equips": [
+            {
+                "id": 0,
+                "name": "瑟魯基之劍",
+                "src": "knight/equip_weapon.webp",
+                "category": "weapon",
+                "attack": {
+                    "small": 16,
+                    "large": 10
+                },
+                "grip": "單手武器",
+                "value": 0,
+                "safetyValue": 6,
+                "material": "金屬",
+                "weight": 120,
+                "occupation": "[騎士]",
+                "feature": "近距離命中+2"
+            },
+            {
+                "id": 1,
+                "name": "騎士面甲",
+                "src": "knight/equip_helmet.webp",
+                "category": "armor helmet",
+                "armor": 3,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "鐵",
+                "weight": 40,
+                "occupation": "[騎士]",
+                "feature": null
+            },
+            {
+                "id": 2,
+                "name": "妖魔戰士護身符",
+                "src": "knight/equip_amulet.webp",
+                "category": "jewelry amulet",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "寶石",
+                "weight": 5,
+                "occupation": "[所有職業]",
+                "feature": "體力上限+20"
+            },
+            {
+                "id": 3,
+                "name": "T恤",
+                "src": "knight/equip_shirt.webp",
+                "category": "armor shirt",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 5,
+                "occupation": "[所有職業]",
+                "feature": null
+            },
+            {
+                "id": 4,
+                "name": "精靈金屬盔甲",
+                "src": "knight/equip_bodyArmor.webp",
+                "category": "armor bodyArmor",
+                "armor": 6,
+                "value": 0,
+                "safetyValue": 6,
+                "material": "奧里哈魯根",
+                "weight": 250,
+                "occupation": "[騎士][妖精][黑暗妖精]",
+                "feature": null
+            },
+            {
+                "id": 5,
+                "name": "保護者斗篷",
+                "src": "knight/equip_cloak.webp",
+                "category": "armor cloak",
+                "armor": 3,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 10,
+                "occupation": "[所有職業]",
+                "feature": null
+            },
+            {
+                "id": 6,
+                "name": "瞬間移動控制戒指",
+                "src": "knight/equip_ring.webp",
+                "category": "jewelry left-ring",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
+            },
+            {
+                "id": 7,
+                "name": "身體腰帶",
+                "src": "knight/equip_belt.webp",
+                "category": "jewelry belt",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "皮",
+                "weight": 50,
+                "occupation": "[所有職業]",
+                "feature": "體力上限+50"
+            },
+            {
+                "id": 8,
+                "name": "精靈盾牌",
+                "src": "knight/equip_shield.webp",
+                "category": "armor shield",
+                "armor": 2,
+                "value": 0,
+                "safetyValue": 6,
+                "material": "銀",
+                "weight": 50,
+                "occupation": "[騎士][妖精][法師][黑暗妖精]",
+                "feature": null
+            },
+            {
+                "id": 9,
+                "name": "力量手套",
+                "src": "knight/equip_gloves.webp",
+                "category": "armor gloves",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "皮",
+                "weight": 18,
+                "occupation": "[所有職業]",
+                "isAttrEquip": true,
+                "attribute": {
+                    "str": 2
+                },
+                "feature": "力量 +2"
+            },
+            {
+                "id": 10,
+                "name": "形體控制戒指",
+                "src": "knight/equip_ring.webp",
+                "category": "jewelry right-ring",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
+            },
+            {
+                "id": 11,
+                "name": "鋼鐵長靴",
+                "src": "knight/equip_boots.webp",
+                "category": "armor boots",
+                "armor": 3,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "鐵",
+                "weight": 50,
+                "occupation": "[所有職業]",
+                "feature": null
+            }
+        ]
     },
+    "elf": {
+        "basic": {
+            "lv": 1,
+            "exp": "0.00%",
+            "hp": 85,
+            "mp": 5,
+            "ac": 8,
+            "mr": 25,
+            "er": 5,
+            "str": 11,
+            "dex": 19,
+            "con": 13,
+            "int": 12,
+            "wis": 12,
+            "cha": 9
+        },
+        "equips": [
+            {
+                "id": 0,
+                "name": "尢米弓",
+                "src": "elf/equip_weapon.webp",
+                "category": "weapon",
 
-    "equips": [
-      {
-        "id": 0,
-        "name": "瑟魯基之劍",
-        "src": "knight/equip_weapon.webp",
-        "category": "weapon",
-        "attack": {
-          "small": 16,
-          "large": 10
-        },
-        "grip": "單手武器",
-        "value": 0,
-        "safetyValue": 6,
-        "material": "金屬",
-        "weight": 120,
-        "occupation": "[騎士]",
-        "feature": "近距離命中+2"
-      },
-      {
-        "id": 1,
-        "name": "騎士面甲",
-        "src": "knight/equip_helmet.webp",
-        "category": "armor helmet",
-        "armor": 3,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "鐵",
-        "weight": 40,
-        "occupation": "[騎士]",
-        "feature": null
-      },
-      {
-        "id": 2,
-        "name": "妖魔戰士護身符",
-        "src": "knight/equip_amulet.webp",
-        "category": "jewelry amulet",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "寶石",
-        "weight": 5,
-        "occupation": "[所有職業]",
-        "feature": "體力上限+20"
-      },
-      {
-        "id": 3,
-        "name": "T恤",
-        "src": "knight/equip_shirt.webp",
-        "category": "armor shirt",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 5,
-        "occupation": "[所有職業]",
-        "feature": null
-      },
-      {
-        "id": 4,
-        "name": "精靈金屬盔甲",
-        "src": "knight/equip_bodyArmor.webp",
-        "category": "armor bodyArmor",
-        "armor": 6,
-        "value": 0,
-        "safetyValue": 6,
-        "material": "奧里哈魯根",
-        "weight": 250,
-        "occupation": "[騎士][妖精][黑暗妖精]",
-        "feature": null
-      },
-      {
-        "id": 5,
-        "name": "保護者斗篷",
-        "src": "knight/equip_cloak.webp",
-        "category": "armor cloak",
-        "armor": 3,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 10,
-        "occupation": "[所有職業]",
-        "feature": null
-      },
-      {
-        "id": 6,
-        "name": "瞬間移動控制戒指",
-        "src": "knight/equip_ring.webp",
-        "category": "jewelry left-ring",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
-      },
-      {
-        "id": 7,
-        "name": "身體腰帶",
-        "src": "knight/equip_belt.webp",
-        "category": "jewelry belt",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "皮",
-        "weight": 50,
-        "occupation": "[所有職業]",
-        "feature": "體力上限+50"
-      },
-      {
-        "id": 8,
-        "name": "精靈盾牌",
-        "src": "knight/equip_shield.webp",
-        "category": "armor shield",
-        "armor": 2,
-        "value": 0,
-        "safetyValue": 6,
-        "material": "銀",
-        "weight": 50,
-        "occupation": "[騎士][妖精][法師][黑暗妖精]",
-        "feature": null
-      },
-      {
-        "id": 9,
-        "name": "力量手套",
-        "src": "knight/equip_gloves.webp",
-        "category": "armor gloves",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "皮",
-        "weight": 18,
-        "occupation": "[所有職業]",
-        "isAttrEquip": true,
-        "attribute": {
-          "str": 2
-        },
-        "feature": "力量 +2"
-      },
-      {
-        "id": 10,
-        "name": "形體控制戒指",
-        "src": "knight/equip_ring.webp",
-        "category": "jewelry right-ring",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
-      },
-      {
-        "id": 11,
-        "name": "鋼鐵長靴",
-        "src": "knight/equip_boots.webp",
-        "category": "armor boots",
-        "armor": 3,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "鐵",
-        "weight": 50,
-        "occupation": "[所有職業]",
-        "feature": null
-      }
-    ]
-  },
-  "elf": {
-    "basic": {
-      "lv": 1,
-      "exp": "0.00%",
-      "hp": 85,
-      "mp": 5,
-      "ac": 8,
-      "mr": 25,
-      "er": 5,
-      "str": 11,
-      "dex": 19,
-      "con": 13,
-      "int": 12,
-      "wis": 12,
-      "cha": 9
+                "attack": {
+                    "small": 3,
+                    "large": 3
+                },
+                "grip": "雙手武器",
+                "value": 0,
+                "safetyValue": 6,
+                "material": "木",
+                "weight": 40,
+                "occupation": "[妖精]",
+                "feature": "額外攻擊點數+2"
+            },
+            {
+                "id": 1,
+                "name": "艾爾穆的祝福",
+                "src": "elf/equip_helmet.webp",
+                "category": "armor helmet",
+
+                "armor": 2,
+                "value": 0,
+                "safetyValue": 6,
+                "material": "皮",
+                "weight": 13,
+                "occupation": "[妖精]",
+                "isAttrEquip": true,
+                "attribute": {
+                    "dex": 1
+                },
+                "feature": "敏捷+1"
+            },
+            {
+                "id": 2,
+                "name": "妖魔戰士護身符",
+                "src": "elf/equip_amulet.webp",
+                "category": "jewelry amulet",
+
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "寶石",
+                "weight": 5,
+                "occupation": "[所有職業]",
+                "feature": "體力上限+20"
+            },
+            {
+                "id": 3,
+                "name": "精靈T恤",
+                "src": "elf/equip_shirt.webp",
+                "category": "armor shirt",
+
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 6,
+                "material": "布",
+                "weight": 5,
+                "occupation": "[妖精]",
+                "feature": null
+            },
+            {
+                "id": 4,
+                "name": "精靈金屬盔甲",
+                "src": "elf/equip_bodyArmor.webp",
+                "category": "armor bodyArmor",
+
+                "armor": 6,
+                "value": 0,
+                "safetyValue": 6,
+                "material": "奧里哈魯根",
+                "weight": 250,
+                "occupation": "[騎士][妖精][黑暗妖精]",
+                "feature": null
+            },
+            {
+                "id": 5,
+                "name": "精靈斗篷",
+                "src": "elf/equip_cloak.webp",
+                "category": "armor cloak",
+
+                "armor": 1,
+                "value": 0,
+                "safetyValue": 6,
+                "material": "布",
+                "weight": 10,
+                "occupation": "[所有職業]",
+                "feature": "妖精裝備時，體力回復量+1"
+            },
+            {
+                "id": 6,
+                "name": "瞬間移動控制戒指",
+                "src": "elf/equip_ring.webp",
+                "category": "jewelry left-ring",
+
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
+            },
+            {
+                "id": 7,
+                "name": "身體腰帶",
+                "src": "elf/equip_belt.webp",
+                "category": "jewelry belt",
+
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "皮",
+                "weight": 50,
+                "occupation": "[所有職業]",
+                "feature": "體力上限+50"
+            },
+            {
+                "id": 9,
+                "name": "腕甲",
+                "src": "elf/equip_gloves.webp",
+                "category": "armor gloves",
+
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "皮",
+                "weight": 10,
+                "occupation": "[騎士][妖精][黑暗妖精]",
+                "feature": "遠距離命中+2"
+            },
+            {
+                "id": 10,
+                "name": "形體控制戒指",
+                "src": "elf/equip_ring.webp",
+                "category": "jewelry right-ring",
+
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
+            },
+            {
+                "id": 11,
+                "name": "鋼鐵長靴",
+                "src": "elf/equip_boots.webp",
+                "category": "armor boots",
+
+                "armor": 3,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "鐵",
+                "weight": 50,
+                "occupation": "[所有職業]",
+                "feature": null
+            }
+        ]
     },
-    "equips": [
-      {
-        "id": 0,
-        "name": "尢米弓",
-        "src": "elf/equip_weapon.webp",
-        "category": "weapon",
-
-        "attack": {
-          "small": 3,
-          "large": 3
+    "mage": {
+        "basic": {
+            "lv": 1,
+            "exp": "0.00%",
+            "hp": 32,
+            "mp": 158,
+            "ac": 10,
+            "mr": 26,
+            "er": -1,
+            "str": 8,
+            "dex": 7,
+            "con": 12,
+            "int": 19,
+            "wis": 18,
+            "cha": 12
         },
-        "grip": "雙手武器",
-        "value": 0,
-        "safetyValue": 6,
-        "material": "木",
-        "weight": 40,
-        "occupation": "[妖精]",
-        "feature": "額外攻擊點數+2"
-      },
-      {
-        "id": 1,
-        "name": "艾爾穆的祝福",
-        "src": "elf/equip_helmet.webp",
-        "category": "armor helmet",
 
-        "armor": 2,
-        "value": 0,
-        "safetyValue": 6,
-        "material": "皮",
-        "weight": 13,
-        "occupation": "[妖精]",
-        "isAttrEquip": true,
-        "attribute": {
-          "dex": 1
-        },
-        "feature": "敏捷+1"
-      },
-      {
-        "id": 2,
-        "name": "妖魔戰士護身符",
-        "src": "elf/equip_amulet.webp",
-        "category": "jewelry amulet",
-
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "寶石",
-        "weight": 5,
-        "occupation": "[所有職業]",
-        "feature": "體力上限+20"
-      },
-      {
-        "id": 3,
-        "name": "精靈T恤",
-        "src": "elf/equip_shirt.webp",
-        "category": "armor shirt",
-
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 6,
-        "material": "布",
-        "weight": 5,
-        "occupation": "[妖精]",
-        "feature": null
-      },
-      {
-        "id": 4,
-        "name": "精靈金屬盔甲",
-        "src": "elf/equip_bodyArmor.webp",
-        "category": "armor bodyArmor",
-
-        "armor": 6,
-        "value": 0,
-        "safetyValue": 6,
-        "material": "奧里哈魯根",
-        "weight": 250,
-        "occupation": "[騎士][妖精][黑暗妖精]",
-        "feature": null
-      },
-      {
-        "id": 5,
-        "name": "精靈斗篷",
-        "src": "elf/equip_cloak.webp",
-        "category": "armor cloak",
-
-        "armor": 1,
-        "value": 0,
-        "safetyValue": 6,
-        "material": "布",
-        "weight": 10,
-        "occupation": "[所有職業]",
-        "feature": "妖精裝備時，體力回復量+1"
-      },
-      {
-        "id": 6,
-        "name": "瞬間移動控制戒指",
-        "src": "elf/equip_ring.webp",
-        "category": "jewelry left-ring",
-
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
-      },
-      {
-        "id": 7,
-        "name": "身體腰帶",
-        "src": "elf/equip_belt.webp",
-        "category": "jewelry belt",
-
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "皮",
-        "weight": 50,
-        "occupation": "[所有職業]",
-        "feature": "體力上限+50"
-      },
-      {
-        "id": 9,
-        "name": "腕甲",
-        "src": "elf/equip_gloves.webp",
-        "category": "armor gloves",
-
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "皮",
-        "weight": 10,
-        "occupation": "[騎士][妖精][黑暗妖精]",
-        "feature": "遠距離命中+2"
-      },
-      {
-        "id": 10,
-        "name": "形體控制戒指",
-        "src": "elf/equip_ring.webp",
-        "category": "jewelry right-ring",
-
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
-      },
-      {
-        "id": 11,
-        "name": "鋼鐵長靴",
-        "src": "elf/equip_boots.webp",
-        "category": "armor boots",
-
-        "armor": 3,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "鐵",
-        "weight": 50,
-        "occupation": "[所有職業]",
-        "feature": null
-      }
-    ]
-  },
-  "mage": {
-    "basic": {
-      "lv": 1,
-      "exp": "0.00%",
-      "hp": 32,
-      "mp": 158,
-      "ac": 10,
-      "mr": 26,
-      "er": -1,
-      "str": 8,
-      "dex": 7,
-      "con": 12,
-      "int": 19,
-      "wis": 18,
-      "cha": 12
+        "equips": [
+            {
+                "id": 0,
+                "name": "瑪那魔杖",
+                "src": "mage/equip_weapon.webp",
+                "category": "weapon",
+                "attack": {
+                    "small": 7,
+                    "large": 7
+                },
+                "grip": "單手武器",
+                "value": 0,
+                "safetyValue": 6,
+                "material": "木",
+                "weight": 15,
+                "occupation": "[法師]",
+                "feature": "魔攻+1"
+            },
+            {
+                "id": 1,
+                "name": "法師之帽",
+                "src": "mage/equip_helmet.webp",
+                "category": "armor helmet",
+                "armor": 2,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 20,
+                "occupation": "[法師]",
+                "feature": null
+            },
+            {
+                "id": 2,
+                "name": "妖魔戰士護身符",
+                "src": "mage/equip_amulet.webp",
+                "category": "jewelry amulet",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "寶石",
+                "weight": 5,
+                "occupation": "[所有職業]",
+                "feature": "體力上限+20"
+            },
+            {
+                "id": 3,
+                "name": "T恤",
+                "src": "mage/equip_shirt.webp",
+                "category": "armor shirt",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 5,
+                "occupation": "[所有職業]",
+                "feature": null
+            },
+            {
+                "id": 4,
+                "name": "法師長袍",
+                "src": "mage/equip_bodyArmor.webp",
+                "category": "armor bodyArmor",
+                "armor": 3,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 60,
+                "occupation": "[法師]",
+                "feature": null
+            },
+            {
+                "id": 5,
+                "name": "瑪那斗篷",
+                "src": "mage/equip_cloak.webp",
+                "category": "armor cloak",
+                "armor": 2,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 10,
+                "occupation": "[法師]",
+                "feature": "魔力回復量+5"
+            },
+            {
+                "id": 6,
+                "name": "瞬間移動控制戒指",
+                "src": "mage/equip_ring.webp",
+                "category": "jewelry left-ring",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
+            },
+            {
+                "id": 7,
+                "name": "精神腰帶",
+                "src": "mage/equip_belt.webp",
+                "category": "jewelry belt",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "皮",
+                "weight": 50,
+                "occupation": "[所有職業]",
+                "feature": "魔力上限+50"
+            },
+            {
+                "id": 8,
+                "name": "魔法能量之書",
+                "src": "mage/equip_shield.webp",
+                "category": "armor shield",
+                "armor": 2,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "紙",
+                "weight": 20,
+                "occupation": "[法師]",
+                "isAttrEquip": true,
+                "attribute": {
+                    "int": 1
+                },
+                "feature": "智力 +1"
+            },
+            {
+                "id": 9,
+                "name": "鋼鐵手套",
+                "src": "mage/equip_gloves.webp",
+                "category": "armor gloves",
+                "armor": 1,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "鐵",
+                "weight": 40,
+                "occupation": "[所有職業]",
+                "feature": null
+            },
+            {
+                "id": 10,
+                "name": "形體控制戒指",
+                "src": "mage/equip_ring.webp",
+                "category": "jewelry right-ring",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
+            },
+            {
+                "id": 11,
+                "name": "鋼鐵長靴",
+                "src": "mage/equip_boots.webp",
+                "category": "armor boots",
+                "armor": 3,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "鐵",
+                "weight": 50,
+                "occupation": "[所有職業]",
+                "feature": null
+            }
+        ]
     },
-
-    "equips": [
-      {
-        "id": 0,
-        "name": "瑪那魔杖",
-        "src": "mage/equip_weapon.webp",
-        "category": "weapon",
-        "attack": {
-          "small": 7,
-          "large": 7
+    "darkElf": {
+        "basic": {
+            "lv": 1,
+            "exp": "0.00%",
+            "hp": 162,
+            "mp": 3,
+            "ac": 9,
+            "mr": 10,
+            "er": 7,
+            "str": 18,
+            "dex": 18,
+            "con": 10,
+            "int": 10,
+            "wis": 11,
+            "cha": 9
         },
-        "grip": "單手武器",
-        "value": 0,
-        "safetyValue": 6,
-        "material": "木",
-        "weight": 15,
-        "occupation": "[法師]",
-        "feature": "魔攻+1"
-      },
-      {
-        "id": 1,
-        "name": "法師之帽",
-        "src": "mage/equip_helmet.webp",
-        "category": "armor helmet",
-        "armor": 2,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 20,
-        "occupation": "[法師]",
-        "feature": null
-      },
-      {
-        "id": 2,
-        "name": "妖魔戰士護身符",
-        "src": "mage/equip_amulet.webp",
-        "category": "jewelry amulet",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "寶石",
-        "weight": 5,
-        "occupation": "[所有職業]",
-        "feature": "體力上限+20"
-      },
-      {
-        "id": 3,
-        "name": "T恤",
-        "src": "mage/equip_shirt.webp",
-        "category": "armor shirt",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 5,
-        "occupation": "[所有職業]",
-        "feature": null
-      },
-      {
-        "id": 4,
-        "name": "法師長袍",
-        "src": "mage/equip_bodyArmor.webp",
-        "category": "armor bodyArmor",
-        "armor": 3,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 60,
-        "occupation": "[法師]",
-        "feature": null
-      },
-      {
-        "id": 5,
-        "name": "瑪那斗篷",
-        "src": "mage/equip_cloak.webp",
-        "category": "armor cloak",
-        "armor": 2,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 10,
-        "occupation": "[法師]",
-        "feature": "魔力回復量+5"
-      },
-      {
-        "id": 6,
-        "name": "瞬間移動控制戒指",
-        "src": "mage/equip_ring.webp",
-        "category": "jewelry left-ring",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
-      },
-      {
-        "id": 7,
-        "name": "精神腰帶",
-        "src": "mage/equip_belt.webp",
-        "category": "jewelry belt",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "皮",
-        "weight": 50,
-        "occupation": "[所有職業]",
-        "feature": "魔力上限+50"
-      },
-      {
-        "id": 8,
-        "name": "魔法能量之書",
-        "src": "mage/equip_shield.webp",
-        "category": "armor shield",
-        "armor": 2,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "紙",
-        "weight": 20,
-        "occupation": "[法師]",
-        "isAttrEquip": true,
-        "attribute": {
-          "int": 1
-        },
-        "feature": "智力 +1"
-      },
-      {
-        "id": 9,
-        "name": "鋼鐵手套",
-        "src": "mage/equip_gloves.webp",
-        "category": "armor gloves",
-        "armor": 1,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "鐵",
-        "weight": 40,
-        "occupation": "[所有職業]",
-        "feature": null
-      },
-      {
-        "id": 10,
-        "name": "形體控制戒指",
-        "src": "mage/equip_ring.webp",
-        "category": "jewelry right-ring",
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
-      },
-      {
-        "id": 11,
-        "name": "鋼鐵長靴",
-        "src": "mage/equip_boots.webp",
-        "category": "armor boots",
-        "armor": 3,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "鐵",
-        "weight": 50,
-        "occupation": "[所有職業]",
-        "feature": null
-      }
-    ]
-  },
-  "darkElf": {
-    "basic": {
-      "lv": 1,
-      "exp": "0.00%",
-      "hp": 162,
-      "mp": 3,
-      "ac": 9,
-      "mr": 10,
-      "er": 7,
-      "str": 18,
-      "dex": 18,
-      "con": 10,
-      "int": 10,
-      "wis": 11,
-      "cha": 9
-    },
 
-    "equips": [
-      {
-        "id": 0,
-        "name": "暗黑雙刀",
-        "src": "darkElf/equip_weapon.webp",
-        "category": "weapon",
-        "grip": "雙手武器",
-        "attack": {
-          "small": 17,
-          "large": 13
-        },
-        "value": 0,
-        "safetyValue": 6,
-        "material": "白金",
-        "weight": 40,
-        "occupation": "[黑暗妖精]",
-        "feature": "近距離命中+4\n  額外攻擊點數+3"
-      },
-      {
-        "id": 1,
-        "name": "影子面具",
-        "src": "darkElf/equip_helmet.webp",
-        "category": "armor helmet",
+        "equips": [
+            {
+                "id": 0,
+                "name": "暗黑雙刀",
+                "src": "darkElf/equip_weapon.webp",
+                "category": "weapon",
+                "grip": "雙手武器",
+                "attack": {
+                    "small": 17,
+                    "large": 13
+                },
+                "value": 0,
+                "safetyValue": 6,
+                "material": "白金",
+                "weight": 40,
+                "occupation": "[黑暗妖精]",
+                "feature": "近距離命中+4\n  額外攻擊點數+3"
+            },
+            {
+                "id": 1,
+                "name": "影子面具",
+                "src": "darkElf/equip_helmet.webp",
+                "category": "armor helmet",
 
-        "armor": 2,
-        "value": 0,
-        "safetyValue": 6,
-        "material": "布",
-        "weight": 10,
-        "occupation": "[黑暗妖精]",
-        "feature": null
-      },
-      {
-        "id": 2,
-        "name": "妖魔戰士護身符",
-        "src": "darkElf/equip_amulet.webp",
-        "category": "jewelry amulet",
+                "armor": 2,
+                "value": 0,
+                "safetyValue": 6,
+                "material": "布",
+                "weight": 10,
+                "occupation": "[黑暗妖精]",
+                "feature": null
+            },
+            {
+                "id": 2,
+                "name": "妖魔戰士護身符",
+                "src": "darkElf/equip_amulet.webp",
+                "category": "jewelry amulet",
 
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "寶石",
-        "weight": 5,
-        "occupation": "[所有職業]",
-        "feature": "體力上限+20"
-      },
-      {
-        "id": 3,
-        "name": "T恤",
-        "src": "darkElf/equip_shirt.webp",
-        "category": "armor shirt",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "寶石",
+                "weight": 5,
+                "occupation": "[所有職業]",
+                "feature": "體力上限+20"
+            },
+            {
+                "id": 3,
+                "name": "T恤",
+                "src": "darkElf/equip_shirt.webp",
+                "category": "armor shirt",
 
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 5,
-        "occupation": "[所有職業]",
-        "feature": null
-      },
-      {
-        "id": 4,
-        "name": "黑暗長袍",
-        "src": "darkElf/equip_bodyArmor.webp",
-        "category": "armor bodyArmor",
-        "armor": 5,
-        "value": 0,
-        "safetyValue": 6,
-        "material": "布",
-        "weight": 20,
-        "occupation": "[黑暗妖精]",
-        "feature": "體力回復 +5"
-      },
-      {
-        "id": 5,
-        "name": "黑暗斗篷",
-        "src": "darkElf/equip_cloak.webp",
-        "category": "armor cloak",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 5,
+                "occupation": "[所有職業]",
+                "feature": null
+            },
+            {
+                "id": 4,
+                "name": "黑暗長袍",
+                "src": "darkElf/equip_bodyArmor.webp",
+                "category": "armor bodyArmor",
+                "armor": 5,
+                "value": 0,
+                "safetyValue": 6,
+                "material": "布",
+                "weight": 20,
+                "occupation": "[黑暗妖精]",
+                "feature": "體力回復 +5"
+            },
+            {
+                "id": 5,
+                "name": "黑暗斗篷",
+                "src": "darkElf/equip_cloak.webp",
+                "category": "armor cloak",
 
-        "armor": 3,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "布",
-        "weight": 20,
-        "occupation": "[黑暗妖精]",
-        "feature": "體力上限+30"
-      },
-      {
-        "id": 6,
-        "name": "瞬間移動控制戒指",
-        "src": "darkElf/equip_ring.webp",
-        "category": "jewelry left-ring",
+                "armor": 3,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "布",
+                "weight": 20,
+                "occupation": "[黑暗妖精]",
+                "feature": "體力上限+30"
+            },
+            {
+                "id": 6,
+                "name": "瞬間移動控制戒指",
+                "src": "darkElf/equip_ring.webp",
+                "category": "jewelry left-ring",
 
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
-      },
-      {
-        "id": 7,
-        "name": "身體腰帶",
-        "src": "darkElf/equip_belt.webp",
-        "category": "jewelry belt",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用傳送術或傳送道具時，可以指定傳送到曾經記憶過的地點"
+            },
+            {
+                "id": 7,
+                "name": "身體腰帶",
+                "src": "darkElf/equip_belt.webp",
+                "category": "jewelry belt",
 
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "皮",
-        "weight": 50,
-        "occupation": "[所有職業]",
-        "feature": "體力上限+50"
-      },
-      {
-        "id": 9,
-        "name": "影子手套",
-        "src": "darkElf/equip_gloves.webp",
-        "category": "armor gloves",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "皮",
+                "weight": 50,
+                "occupation": "[所有職業]",
+                "feature": "體力上限+50"
+            },
+            {
+                "id": 9,
+                "name": "影子手套",
+                "src": "darkElf/equip_gloves.webp",
+                "category": "armor gloves",
 
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 6,
-        "material": "皮",
-        "weight": 10,
-        "occupation": "[黑暗妖精]",
-        "isAttrEquip": true,
-        "attribute": {
-          "con": 1
-        },
-        "feature": "體質+1"
-      },
-      {
-        "id": 10,
-        "name": "形體控制戒指",
-        "src": "darkElf/equip_ring.webp",
-        "category": "jewelry right-ring",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 6,
+                "material": "皮",
+                "weight": 10,
+                "occupation": "[黑暗妖精]",
+                "isAttrEquip": true,
+                "attribute": {
+                    "con": 1
+                },
+                "feature": "體質+1"
+            },
+            {
+                "id": 10,
+                "name": "形體控制戒指",
+                "src": "darkElf/equip_ring.webp",
+                "category": "jewelry right-ring",
 
-        "armor": 0,
-        "value": 0,
-        "safetyValue": 0,
-        "material": "金",
-        "weight": 3,
-        "occupation": "[所有職業]",
-        "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
-      },
-      {
-        "id": 11,
-        "name": "影子長靴",
-        "src": "darkElf/equip_boots.webp",
-        "category": "armor boots",
+                "armor": 0,
+                "value": 0,
+                "safetyValue": 0,
+                "material": "金",
+                "weight": 3,
+                "occupation": "[所有職業]",
+                "feature": "使用變身術或變身道具時，可以指定要變身的怪物"
+            },
+            {
+                "id": 11,
+                "name": "影子長靴",
+                "src": "darkElf/equip_boots.webp",
+                "category": "armor boots",
 
-        "armor": 2,
-        "value": 0,
-        "safetyValue": 4,
-        "material": "皮",
-        "weight": 10,
-        "occupation": "[所有職業]",
-        "feature": "體力上限+50\n  體力回復量+4"
-      }
-    ]
-  }
+                "armor": 2,
+                "value": 0,
+                "safetyValue": 4,
+                "material": "皮",
+                "weight": 10,
+                "occupation": "[所有職業]",
+                "feature": "體力上限+50\n  體力回復量+4"
+            }
+        ]
+    }
 }

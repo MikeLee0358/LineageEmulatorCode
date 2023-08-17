@@ -1,35 +1,37 @@
-<template>
-  <main>
-    <RouterView />
-  </main>
+<template lang="pug">
+main
+    RouterView
 </template>
 
 <script setup>
-import { RouterView } from "vue-router";
+import { RouterView } from 'vue-router'
 </script>
 
 <style lang="scss">
-@use "./scss/common.scss";
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
+@use './scss/common.scss';
 
-  a {
-    @extend %cursorPointer;
-  }
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    a {
+        @extend %cursorPointer;
+    }
 }
+
 @media (orientation: portrait) {
-  main {
-    * {
-      display: none !important;
+    main {
+        * {
+            display: none !important;
+        }
+
+        &::after {
+            content: '支援橫幅模式';
+            font-size: 12vw;
+        }
     }
-    &::after {
-      content: "支援橫幅模式";
-      font-size: 12vw;
-    }
-  }
 }
 </style>

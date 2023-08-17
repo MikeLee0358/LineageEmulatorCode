@@ -1,28 +1,34 @@
 {
-  "name": "lineage",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
-  },
-  "dependencies": {
-    "pinia": "^2.0.23",
-    "sweetalert2": "^11.7.1",
-    "vue": "^3.2.41",
-    "vue-router": "^4.1.6"
-  },
-  "devDependencies": {
-    "@rushstack/eslint-patch": "^1.1.4",
-    "@vitejs/plugin-vue": "^3.1.2",
-    "@vue/eslint-config-prettier": "^7.0.0",
-    "cypress": "^12.17.3",
-    "eslint": "^8.22.0",
-    "eslint-plugin-vue": "^9.3.0",
-    "prettier": "^2.7.1",
-    "sass": "^1.56.0",
-    "vite": "^3.1.8",
-    "vite-plugin-vsharp": "^1.4.2"
-  }
+    "name": "lineage",
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "cypress:open": "cypress open",
+        "cypress:run firefox": "cypress run --headed --browser firefox",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "pinia": "^2.1.6",
+        "vue": "^3.3.4",
+        "vue-router": "^4.2.4"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.3.2",
+        "@vitejs/plugin-vue": "^4.2.3",
+        "@vue/eslint-config-prettier": "^8.0.0",
+        "@vue/language-plugin-pug": "^1.8.8",
+        "cypress": "^12.17.3",
+        "eslint": "^8.45.0",
+        "eslint-plugin-cypress": "^2.14.0",
+        "eslint-plugin-vue": "^9.15.1",
+        "eslint-plugin-vue-pug": "^0.6.0",
+        "prettier": "3.0.1",
+        "pug": "^3.0.2",
+        "sass": "^1.56.0",
+        "vite": "^4.4.6",
+        "vite-plugin-vsharp": "^1.4.2"
+    }
 }

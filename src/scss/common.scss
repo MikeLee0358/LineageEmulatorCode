@@ -1,56 +1,52 @@
 /* custom css */
 :root {
-  --color-grey: #aaa9a9;
-  --color-white: #e8e8e8;
-  --color-yellow: #e9ee8b;
-  --color-red: #ff2424;
+    --color-grey: #aaa9a9;
+    --color-white: #e8e8e8;
+    --color-yellow: #e9ee8b;
+    --color-red: #ff2424;
 }
 body {
-  background: black;
-  color: var(--color-white);
-  font-family: serif;
-  user-select: none;
-  cursor: not-allowed;
+    background: black;
+    color: var(--color-white);
+    font-family: serif;
+    user-select: none;
+    cursor: not-allowed;
 }
-
 
 %templateInfoStyle {
-  padding: 0.4vw 0px 0.1vw 0.3vw;
-  background: rgba(0, 0, 0, 0.45);
-  border: 0.3vw solid;
-  border-color: #c7c2be #817f80 #817f80 #c7c2be;
-  white-space: pre-wrap;
-  line-height: 100%;
+    padding: 0.4vw 0px 0.1vw 0.3vw;
+    background: rgba(0, 0, 0, 0.45);
+    border: 0.3vw solid;
+    border-color: #c7c2be #817f80 #817f80 #c7c2be;
+    white-space: pre-wrap;
+    line-height: 100%;
 }
 %infoTemplateStyle {
-  padding: 0.4vw 0 0.2vw 0.3vw;
-  background: rgba(0, 0, 0, 0.45);
-  border: 0.3vw solid;
-  border-color: #c7c2be #817f80 #817f80 #c7c2be;
-  line-height: 105%;
+    padding: 0.4vw 0 0.2vw 0.3vw;
+    background: rgba(0, 0, 0, 0.45);
+    border: 0.3vw solid;
+    border-color: #c7c2be #817f80 #817f80 #c7c2be;
+    line-height: 105%;
 }
 %activeStyle {
-  background-repeat: round;
-  background-size: contain;
-  outline: 0.3vw solid rgba(244, 230, 174, 0.83);
-  box-shadow: 0 0 1.25vw 0 rgba(244, 230, 174, 0.83);
+    background-repeat: round;
+    background-size: contain;
+    outline: 0.3vw solid rgba(244, 230, 174, 0.83);
+    box-shadow: 0 0 1.25vw 0 rgba(244, 230, 174, 0.83);
 }
 
 %backgroundCoverRound {
-  background-size: cover;
-  background-repeat: round;
+    background-size: cover;
+    background-repeat: round;
 }
 %keepImageSameRate {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .visible {
-  visibility: visible !important;
+    visibility: visible !important;
 }
 %cursorPointer {
-  cursor: url("/src/assets/UI/UI_pointer.webp"), auto;
-
+    cursor: url('/src/assets/UI/UI_pointer.webp'), auto;
 }
-
-
