@@ -1,13 +1,13 @@
 <template lang="pug">
 // death knight
 figure.deathKnight.male(v-show='storeKnight.game.isDeathKnight')
-    figcaption.nameContainer(v-if="storeRole.isGenderType('male')")
+    figcaption.nameContainer(v-if="storeRole.outer.isGenderType('male')")
         p.title 蛇髮 名模↙
         p.name 熱血狂志
         p.chatEvent(v-show='storeKnight.game.isShowGameChat') 熱血狂志: {{ storeKnight.game.chatMsg }}
 // knight
-figure(:class='storeRole.getGenderClass()' v-show='!storeKnight.game.isDeathKnight')
-    figcaption.nameContainer(v-if="storeRole.isGenderType('male')")
+figure(:class='storeRole.outer.getGenderClass()' v-show='!storeKnight.game.isDeathKnight')
+    figcaption.nameContainer(v-if="storeRole.outer.isGenderType('male')")
         p.title 蛇髮 名模↙
         p.name 熱血狂志
         p.chatEvent(v-show='storeKnight.game.isShowGameChat') 熱血狂志: {{ storeKnight.game.chatMsg }}
@@ -19,13 +19,13 @@ import { useKnightStore } from '../stores/knight'
 const storeRole = useRoleStore()
 const storeKnight = useKnightStore()
 
-if (storeRole.role.currentGender === 'male') storeKnight.repeatTalkChatEvent(15)
+if (storeRole.status.currentGender === 'male') storeKnight.repeatTalkChatEvent(15)
 </script>
 
 <style lang="scss" scoped>
 .knight {
     position: relative;
-    background-image: v-bind('storeRole.getGifUrl()');
+    background-image: v-bind('storeRole.outer.getGifUrl()');
     background-size: cover;
     background-repeat: round;
 

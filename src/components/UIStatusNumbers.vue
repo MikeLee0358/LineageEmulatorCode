@@ -1,27 +1,26 @@
 <template lang="pug">
 ul.uiStatusNumbers
     ul.level
-        li.lv {{ role.currentData.basic.lv }}
-        li.exp {{ role.currentData.basic.exp }}
+        li.lv {{ storeRole.outer.currentData().basic.lv }}
+        li.exp {{ storeRole.outer.currentData().basic.exp }}
     ul.basic
-        li {{ role.currentData.basic.hp }}/{{ role.currentData.basic.hp }}
-        li {{ role.currentData.basic.mp }}/{{ role.currentData.basic.mp }}
-        li {{ storeRole.getAC }}
+        li {{ storeRole.outer.currentData().basic.hp }}/{{ storeRole.outer.currentData().basic.hp }}
+        li {{ storeRole.outer.currentData().basic.mp }}/{{ storeRole.outer.currentData().basic.mp }}
+        li {{ storeRole.outer.getAC() }}
     ul.attributes
-        li {{ role.currentData.basic.str }}
-        li {{ role.currentData.basic.dex }}
-        li {{ role.currentData.basic.con }}
-        li {{ role.currentData.basic.int }}
-        li {{ role.currentData.basic.wis }}
-        li {{ role.currentData.basic.cha }}
-    li.er {{ storeRole.getER() }}
+        li {{ storeRole.outer.currentData().basic.str }}
+        li {{ storeRole.outer.currentData().basic.dex }}
+        li {{ storeRole.outer.currentData().basic.con }}
+        li {{ storeRole.outer.currentData().basic.int }}
+        li {{ storeRole.outer.currentData().basic.wis }}
+        li {{ storeRole.outer.currentData().basic.cha }}
+    li.er {{ storeRole.outer.getER() }}
 </template>
 
 <script setup>
 import { useRoleStore } from '../stores/role'
-import { storeToRefs } from 'pinia'
+
 const storeRole = useRoleStore()
-const { role } = storeToRefs(storeRole)
 </script>
 
 <style lang="scss">

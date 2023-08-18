@@ -1,7 +1,7 @@
 <template lang="pug">
 ul.uiHp
-    li.hp HP:{{ storeRole.role.currentData.basic.hp }}/{{ storeRole.role.currentData.basic.hp }}
-    li.mp MP:{{ storeRole.role.currentData.basic.mp }}/{{ storeRole.role.currentData.basic.mp }}
+    li.hp HP:{{ storeRole.outer.currentData().basic.hp }}/{{ storeRole.outer.currentData().basic.hp }}
+    li.mp MP:{{ storeRole.outer.currentData().basic.mp }}/{{ storeRole.outer.currentData().basic.mp }}
 
 </template>
 

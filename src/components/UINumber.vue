@@ -4,7 +4,7 @@ ul.uiNumber
         .lv 1
         .exp 0.00%
     li.line2
-        .ac {{ storeRole.getAC }}
+        .ac {{ storeRole.outer.getAC() }}
         .state 0
 </template>
 

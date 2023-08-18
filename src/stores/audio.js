@@ -31,7 +31,7 @@ export const useAudioStore = defineStore('audio', () => {
             return getUrlForHashWhenProd('knight/deathKnight_audio.mp3')
         else
             return getUrlForHashWhenProd(
-                `${storeRole.role.currentRole}/${storeRole.role.currentRole}_audio.mp3`
+                `${storeRole.status.currentRole}/${storeRole.status.currentRole}_audio.mp3`
             )
     }
 

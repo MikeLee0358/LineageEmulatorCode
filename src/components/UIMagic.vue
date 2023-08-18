@@ -3,7 +3,7 @@ ul.uiMagic(@click.stop='handleUIMagic')
     li.close
     ul.magicNumber
         li.magicPower 0
-        li.magicResist {{ storeRole.getMR }}
+        li.magicResist {{ storeRole.outer.getMR() }}
 </template>
 
 <script setup>

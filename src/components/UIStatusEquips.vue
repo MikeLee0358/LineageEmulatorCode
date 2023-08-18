@@ -1,6 +1,6 @@
 <template lang="pug">
 ul.uiStatusEquips
-    li.equip(v-for='equip in storeRole.role.currentData.equips' :key='equip.id' :class='equip.category' :style='{backgroundImage: `url(${storeRole.getUrlForHashWhenProd(equip.src)})`}' @click.stop='getDataForAlgorithm(equip, $event)' :data-displayequipinfo='getEquipInfo(equip)')
+    li.equip(v-for='equip in storeRole.outer.currentData().equips' :key='equip.id' :class='equip.category' :style='{backgroundImage: `url(${storeRole.outer.getUrlForHashWhenProd(equip.src)})`}' @click.stop='getDataForAlgorithm(equip, $event)' :data-displayequipinfo='getEquipInfo(equip)')
 
 </template>
 
@@ -16,8 +16,8 @@ const storeKnight = useKnightStore()
 
 const changeCursor = () => {
     if (storeScroll.status.targetScroll === null)
-        return `url(${storeRole.getUrlForHashWhenProd('UI/UI_pointer.webp')}), auto`
-    else return `url(${storeRole.getUrlForHashWhenProd('UI/UI_target.webp')}), auto`
+        return `url(${storeRole.outer.getUrlForHashWhenProd('UI/UI_pointer.webp')}), auto`
+    else return `url(${storeRole.outer.getUrlForHashWhenProd('UI/UI_target.webp')}), auto`
 }
 const getEquipInfo = (equip) => {
     const showPlusOrMinus = (value) => (value >= 0 ? `+${value}` : value)
@@ -34,14 +34,14 @@ const getEquipInfo = (equip) => {
 
         const nameJewelry = () => {
             if (
-                storeRole.role.currentRole === 'knight' &&
-                storeRole.role.currentGender === 'male' &&
+                storeRole.status.currentRole === 'knight' &&
+                storeRole.status.currentGender === 'male' &&
                 equip.category.includes('right-ring')
             )
                 return (equip.name = `點擊變身`)
             else if (
-                storeRole.role.currentRole === 'knight' &&
-                storeRole.role.currentGender === 'female' &&
+                storeRole.status.currentRole === 'knight' &&
+                storeRole.status.currentGender === 'female' &&
                 equip.category.includes('right-ring')
             )
                 return (equip.name = `形體控制戒指 (使用中)`)
@@ -91,8 +91,8 @@ ${equip.occupation}`
   ${getMaterial()}`
 }
 const assignColorToEquipText = (index) => {
-    const role = storeRole.role.currentRole
-    const equips = storeRole.role.currentData.equips
+    const role = storeRole.status.currentRole
+    const equips = storeRole.outer.currentData().equips
 
     const listColor = {
         grey: 'var(--color-grey)',

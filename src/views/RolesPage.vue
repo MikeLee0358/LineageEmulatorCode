@@ -16,8 +16,8 @@ const storeAudio = useAudioStore()
 const storeRole = useRoleStore()
 
 onBeforeRouteLeave((to) => {
-    storeRole.role.currentGender = to.params.gender
-    storeRole.role.currentRole = to.params.role
+    storeRole.status.currentGender = to.params.gender
+    storeRole.status.currentRole = to.params.role
 })
 </script>
 

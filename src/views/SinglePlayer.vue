@@ -41,7 +41,7 @@ onBeforeRouteLeave(() => {
 .singlePlayerContainer {
     width: 100%;
     height: 100%;
-    background-image: v-bind('storeRole.role.currentBackGround');
+    background-image: v-bind('storeRole.outer.currentBackGround()');
 
     @extend %backgroundCoverRound;
     @extend %cursorPointer;

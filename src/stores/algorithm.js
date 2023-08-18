@@ -51,7 +51,7 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
         let temporaryMRbox = equip.mr
         const toggleEquipHidden = () => event.target.classList.toggle('hidden')
 
-        storeRole.calcEquipAttribute('minusAttribute', equip)
+        storeRole.outer.calcEquipAttribute('minusAttribute', equip)
         toggleEquipHidden()
         equip.armor = 0
 
@@ -59,7 +59,7 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
             toggleEquipHidden()
             equip.armor = temporaryACbox
             equip.mr = temporaryMRbox
-            storeRole.calcEquipAttribute('plusAttribute', equip)
+            storeRole.outer.calcEquipAttribute('plusAttribute', equip)
         }, target.delayTime)
     }
     const handleFailure = (equip, event) => {
@@ -96,7 +96,8 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
             return (
                 (storeScroll.outer.isScrollType('white') && target.value < 0) ||
                 (storeScroll.outer.isScrollType('blessed') && target.value < 0) ||
-                (storeScroll.outer.isScrollType('cursed') && target.value >= Math.abs(target.safetyValue))
+                (storeScroll.outer.isScrollType('cursed') &&
+                    target.value >= Math.abs(target.safetyValue))
             )
         }
         const isValueOver9 = () => Math.abs(target.value) >= 9

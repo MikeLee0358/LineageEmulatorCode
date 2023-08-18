@@ -1,7 +1,7 @@
 <template lang="pug">
 section.uiSlot(@click.stop='handleClick')
     figure(v-for='slot in slotList' :key='slot.id' :class='slot.hotkey')
-        img(:src='storeRole.getUrlForHashWhenProd(slot.src)')
+        img(:src='storeRole.outer.getUrlForHashWhenProd(slot.src)')
         figcaption.slotInfo
             h1 {{ slot.name }}
             p {{ slot.description }}
