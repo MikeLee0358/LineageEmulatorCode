@@ -63,7 +63,7 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
         }, target.delayTime)
     }
     const handleFailure = (equip, event) => {
-        if (Math.abs(target.value) === 9) storeKnight.getGameChatEvent('weaponFailure')
+        if (Math.abs(target.value) === 9) storeKnight.outer.getGameChatEvent('weaponFailure')
 
         dice.state = 0
         storeChat.updateChatState()
@@ -147,19 +147,19 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
         if (storeScroll.outer.isScrollType('white') && isSuccessIn([1, 2])) {
             target.value++
             dice.state = 1
-            storeKnight.getGameChatEvent('weaponSuccess')
+            storeKnight.outer.getGameChatEvent('weaponSuccess')
         } else if (storeScroll.outer.isScrollType('cursed') && isSuccessIn([1, 2, 3])) {
             target.value--
             dice.state = 1
-            storeKnight.getGameChatEvent('weaponSuccess')
+            storeKnight.outer.getGameChatEvent('weaponSuccess')
         } else if (storeScroll.outer.isScrollType('blessed') && isSuccessIn([1, 2, 3, 4])) {
             target.value++
             dice.state = 1
-            storeKnight.getGameChatEvent('weaponSuccess')
+            storeKnight.outer.getGameChatEvent('weaponSuccess')
         } else {
             //failure
             dice.state = -1
-            storeKnight.getGameChatEvent('weaponNope')
+            storeKnight.outer.getGameChatEvent('weaponNope')
         }
 
         storeChat.updateChatState()
@@ -175,7 +175,7 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
         //                   -> success -> +1 & +1 message -> END
         //                   -> failure -> +0 & nothing happened message -> END
         //    ->  false -> END
-        if (storeKnight.game.isStopFunction) return
+        if (storeKnight.status.isStopFunction) return
         if (!target.isMatchedScrollEquipType) return
 
         if (target.isSuccess) {

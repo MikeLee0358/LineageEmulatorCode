@@ -134,10 +134,10 @@ const getDataForAlgorithm = (equip, event) => {
     //event parameter is used for when euqip was gone.
     const updateEquipValue = () => setTimeout(() => (equip.value = storeAlgorithm.target.value), 0)
 
-    if (equip.name === '點擊變身' && storeKnight.game.isDeathKnight) {
-        storeKnight.getGameChatEvent('toBeKnight')
-    } else if (equip.name === '點擊變身' && !storeKnight.game.isDeathKnight)
-        storeKnight.getGameChatEvent('toBeDeathKnight')
+    if (equip.name === '點擊變身' && storeKnight.status.isDeathKnight) {
+        storeKnight.outer.getGameChatEvent('toBeKnight')
+    } else if (equip.name === '點擊變身' && !storeKnight.status.isDeathKnight)
+        storeKnight.outer.getGameChatEvent('toBeDeathKnight')
 
     storeAlgorithm.target.name = equip.name
     storeAlgorithm.target.category = equip.category

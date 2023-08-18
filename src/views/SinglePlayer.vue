@@ -25,8 +25,8 @@ const storeKnight = useKnightStore()
 
 onBeforeRouteLeave(() => {
     //reset to default
-    storeKnight.game.isDeathKnight = false
-    storeKnight.clearRepeatTalkChatEventTimer()
+    storeKnight.status.isDeathKnight = false
+    storeKnight.outer.clearRepeatTalkChatEventTimer()
     storeScroll.outer.clearClickScrollTimer()
     storeScroll.status.targetScroll = null
     storeChat.cleanChat()

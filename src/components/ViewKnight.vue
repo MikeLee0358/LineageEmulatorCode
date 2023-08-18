@@ -1,16 +1,16 @@
 <template lang="pug">
 // death knight
-figure.deathKnight.male(v-show='storeKnight.game.isDeathKnight')
+figure.deathKnight.male(v-show='storeKnight.status.isDeathKnight')
     figcaption.nameContainer(v-if="storeRole.outer.isGenderType('male')")
         p.title 蛇髮 名模↙
         p.name 熱血狂志
-        p.chatEvent(v-show='storeKnight.game.isShowGameChat') 熱血狂志: {{ storeKnight.game.chatMsg }}
+        p.chatEvent(v-show='storeKnight.status.isShowGameChat') 熱血狂志: {{ storeKnight.status.chatMsg }}
 // knight
-figure(:class='storeRole.outer.getGenderClass()' v-show='!storeKnight.game.isDeathKnight')
+figure(:class='storeRole.outer.getGenderClass()' v-show='!storeKnight.status.isDeathKnight')
     figcaption.nameContainer(v-if="storeRole.outer.isGenderType('male')")
         p.title 蛇髮 名模↙
         p.name 熱血狂志
-        p.chatEvent(v-show='storeKnight.game.isShowGameChat') 熱血狂志: {{ storeKnight.game.chatMsg }}
+        p.chatEvent(v-show='storeKnight.status.isShowGameChat') 熱血狂志: {{ storeKnight.status.chatMsg }}
 </template>
 
 <script setup>
@@ -19,7 +19,7 @@ import { useKnightStore } from '../stores/knight'
 const storeRole = useRoleStore()
 const storeKnight = useKnightStore()
 
-if (storeRole.status.currentGender === 'male') storeKnight.repeatTalkChatEvent(15)
+if (storeRole.status.currentGender === 'male') storeKnight.outer.repeatTalkChatEvent(15)
 </script>
 
 <style lang="scss" scoped>

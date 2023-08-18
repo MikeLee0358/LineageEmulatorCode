@@ -27,7 +27,7 @@ export const useAudioStore = defineStore('audio', () => {
         if (state.value === false) audio.pause()
     }
     const getRoleAudioUrl = () => {
-        if (storeKnight.game.isDeathKnight)
+        if (storeKnight.status.isDeathKnight)
             return getUrlForHashWhenProd('knight/deathKnight_audio.mp3')
         else
             return getUrlForHashWhenProd(
