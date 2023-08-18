@@ -25,13 +25,13 @@ const handleClick = (e) => {
         if (e.target.tagName !== 'IMG') return
         return e.target.parentElement.classList[0] //F5 ~F12
     }
-    storeScroll.clearClickScrollTimer()
+    storeScroll.outer.clearClickScrollTimer()
     handleScrollStateAndInfo(getScrollClass(e), true)
 }
 const handleKeyboard = (e) => {
     e.preventDefault()
     e.stopPropagation()
-    storeScroll.clearClickScrollTimer()
+    storeScroll.outer.clearClickScrollTimer()
     handleScrollStateAndInfo(e.key)
 }
 
@@ -62,11 +62,11 @@ const handleScrollStateAndInfo = (classOrKey, isRepeatState = false) => {
 
         if (slot.className === classOrKey) {
             if (isRepeatState)
-                storeScroll.clickTimerId = setInterval(
-                    () => storeScroll.changeScroll(classOrKey),
+                storeScroll.status.clickTimerId = setInterval(
+                    () => storeScroll.outer.changeScroll(classOrKey),
                     750
                 )
-            storeScroll.changeScroll(classOrKey)
+            storeScroll.outer.changeScroll(classOrKey)
             getCssColor(slot.firstChild.src)
             addSlotClass('active')
             handleSlotInfoOpacity(1)

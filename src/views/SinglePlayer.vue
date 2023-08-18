@@ -27,8 +27,8 @@ onBeforeRouteLeave(() => {
     //reset to default
     storeKnight.game.isDeathKnight = false
     storeKnight.clearRepeatTalkChatEventTimer()
-    storeScroll.clearClickScrollTimer()
-    storeScroll.targetScroll = null
+    storeScroll.outer.clearClickScrollTimer()
+    storeScroll.status.targetScroll = null
     storeChat.cleanChat()
     storeUI.ui.btnBox = 'close'
     storeUI.ui.isDefault = true

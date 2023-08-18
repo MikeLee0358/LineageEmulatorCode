@@ -1,61 +1,65 @@
-import { ref } from 'vue'
+import { reactive } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useScrollStore = defineStore('scroll', () => {
-    const targetScroll = ref(null) //if null get pointer icon ; else get target icon
-    const clickTimerId = ref()
-    const changeScroll = (string) => {
-        switch (string) {
-            case 'F6':
-                targetScroll.value = 'whiteArmor'
-                break
 
-            case 'F7':
-                targetScroll.value = 'blessedArmor'
-                break
+    const status = reactive({
+        targetScroll: null,
+        clickTimerId: 0
+    })
 
-            case 'F8':
-                targetScroll.value = 'cursedArmor'
-                break
-            case 'F10':
-                targetScroll.value = 'whiteWeapon'
-                break
 
-            case 'F11':
-                targetScroll.value = 'blessedWeapon'
-                break
+    const outer = {
+        changeScroll: (string) => {
+            switch (string) {
+                case 'F6':
+                    status.targetScroll = 'whiteArmor'
+                    break
+    
+                case 'F7':
+                    status.targetScroll = 'blessedArmor'
+                    break
+    
+                case 'F8':
+                    status.targetScroll = 'cursedArmor'
+                    break
+                case 'F10':
+                    status.targetScroll = 'whiteWeapon'
+                    break
+    
+                case 'F11':
+                    status.targetScroll = 'blessedWeapon'
+                    break
+    
+                case 'F12':
+                    status.targetScroll = 'cursedWeapon'
+                    break
+    
+                default:
+                    status.targetScroll = null
+                    break
+            }
+        },
+        isScrollType: (type) => {
+            return outer.getScrollType() === type
+        },
+        getScrollType: () => {
+            if (status.targetScroll === null) return
+            const reg = /(white)|(cursed)|(blessed)/g
+            return reg.exec(status.targetScroll)[0]
+        },
+        getScrollEquipType: () => {
+            if (status.targetScroll === null) return
+            const reg = /(Armor)|(Weapon)/g
+            return reg.exec(status.targetScroll)[0].toLocaleLowerCase()
+        },
+        clearClickScrollTimer: () => {
+            clearInterval(status.clickTimerId)
+        },
 
-            case 'F12':
-                targetScroll.value = 'cursedWeapon'
-                break
-
-            default:
-                targetScroll.value = null
-                break
-        }
-    }
-    const isScrollType = (type) => getScrollType() === type
-
-    const getScrollType = () => {
-        if (targetScroll.value === null) return
-        const reg = /(white)|(cursed)|(blessed)/g
-        return reg.exec(targetScroll.value)[0]
-    }
-    const getScrollEquiplType = () => {
-        if (targetScroll.value === null) return
-        const reg = /(Armor)|(Weapon)/g
-        return reg.exec(targetScroll.value)[0].toLocaleLowerCase()
-    }
-    const clearClickScrollTimer = () => {
-        clearInterval(clickTimerId.value)
     }
     return {
-        clickTimerId,
-        targetScroll,
-        isScrollType,
-        changeScroll,
-        getScrollType,
-        getScrollEquiplType,
-        clearClickScrollTimer
+        status,
+        outer
     }
 })

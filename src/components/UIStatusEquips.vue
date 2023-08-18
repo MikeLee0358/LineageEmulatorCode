@@ -15,7 +15,7 @@ const storeScroll = useScrollStore()
 const storeKnight = useKnightStore()
 
 const changeCursor = () => {
-    if (storeScroll.targetScroll === null)
+    if (storeScroll.status.targetScroll === null)
         return `url(${storeRole.getUrlForHashWhenProd('UI/UI_pointer.webp')}), auto`
     else return `url(${storeRole.getUrlForHashWhenProd('UI/UI_target.webp')}), auto`
 }

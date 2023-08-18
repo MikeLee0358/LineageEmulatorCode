@@ -15,7 +15,7 @@ export const useChatStore = defineStore('chat', () => {
         }),
 
         detectColor: computed(() => {
-            if (storeScroll.isScrollType('cursed')) return '黑色的'
+            if (storeScroll.outer.isScrollType('cursed')) return '黑色的'
             else if (storeAlgorithm.isCategoryType('weapon')) return '藍色的'
             else return '銀色的'
         }),
@@ -56,9 +56,9 @@ export const useChatStore = defineStore('chat', () => {
         chat.lines = Array(7)
     }
     const updateChatScroll = () => {
-        if (storeScroll.targetScroll === null) return
-        if (storeScroll.targetScroll.includes('Armor')) chat.updateArmor()
-        if (storeScroll.targetScroll.includes('Weapon')) chat.updateWeapon()
+        if (storeScroll.status.targetScroll === null) return
+        if (storeScroll.status.targetScroll.includes('Armor')) chat.updateArmor()
+        if (storeScroll.status.targetScroll.includes('Weapon')) chat.updateWeapon()
     }
     const updateChatState = () => {
         if (storeAlgorithm.dice.state === -1) chat.updateFornope()
