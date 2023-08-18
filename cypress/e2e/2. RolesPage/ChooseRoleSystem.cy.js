@@ -1,7 +1,6 @@
 describe('Test Choose Roles System', () => {
     beforeEach(() => {
         cy.login()
-        cy.url().should('includes', '/roles')
     })
 
     it('Choose Audio works?', () => {

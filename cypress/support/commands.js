@@ -25,6 +25,6 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('login', () => {
-    cy.visit('/')
+    cy.visit('/login')
     cy.get('.login').click()
 })

@@ -70,7 +70,7 @@ const handleScrollStateAndInfo = (classOrKey, isRepeatState = false) => {
             getCssColor(slot.firstChild.src)
             addSlotClass('active')
             handleSlotInfoOpacity(1)
-            storeChat.updateChatScroll()
+            storeChat.outer.updateChatScroll()
         }
     })
 }

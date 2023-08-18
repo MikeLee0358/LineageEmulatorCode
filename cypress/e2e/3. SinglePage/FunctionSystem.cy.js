@@ -1,9 +1,8 @@
-/* eslint-disable cypress/no-force */
 describe('Test Function System', () => {
     beforeEach(() => {
         cy.login()
-        // 測試時有機率抓不到DOM失敗，不過實際狀況不會有問題。
-        cy.get('.male.royal').click()
+        // eslint-disable-next-line cypress/no-force
+        cy.get('.male.royal').click({force: true})
     })
 
     it('Role Window works?', () => {

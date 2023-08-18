@@ -1,6 +1,6 @@
 <template lang="pug">
 ul.uiChat
-    li(v-for='(chatline, index) in storeChat.chat.lines' :key='index') {{ chatline }}
+    li(v-for='(chatline, index) in storeChat.status.lines' :key='index') {{ chatline }}
 </template>
 
 <script setup>

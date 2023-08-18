@@ -66,7 +66,7 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
         if (Math.abs(target.value) === 9) storeKnight.outer.getGameChatEvent('weaponFailure')
 
         dice.state = 0
-        storeChat.updateChatState()
+        storeChat.outer.updateChatState()
         target.value = 0
         getEquipGoneEffect(equip, event)
         resetAtTheEnd(null)
@@ -79,7 +79,7 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
         }
 
         getRandomStateOneTo(value)
-        storeChat.updateChatState()
+        storeChat.outer.updateChatState()
         updateEquipValue()
         resetAtTheEnd(null)
     }
@@ -162,7 +162,7 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
             storeKnight.outer.getGameChatEvent('weaponNope')
         }
 
-        storeChat.updateChatState()
+        storeChat.outer.updateChatState()
         resetAtTheEnd(null)
     }
 

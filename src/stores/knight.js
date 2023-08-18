@@ -96,7 +96,7 @@ export const useKnightStore = defineStore('knight', () => {
                     break
 
                 case 'talk9':
-                    storeChat.chat.lines = getArrayFull(
+                    storeChat.status.lines = getArrayFull(
                         Array(7),
                         '國國國國國國國國國國國國國國國國國國國國國國國國國國國國國國'
                     )

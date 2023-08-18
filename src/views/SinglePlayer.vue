@@ -29,7 +29,7 @@ onBeforeRouteLeave(() => {
     storeKnight.outer.clearRepeatTalkChatEventTimer()
     storeScroll.outer.clearClickScrollTimer()
     storeScroll.status.targetScroll = null
-    storeChat.cleanChat()
+    storeChat.outer.cleanChat()
     storeUI.ui.btnBox = 'close'
     storeUI.ui.isDefault = true
 })
