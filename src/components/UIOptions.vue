@@ -8,10 +8,10 @@ ul.uiOptions(@click.stop='handleUIOptions')
 </template>
 
 <script setup>
-import { useUIStore } from '../stores/ui'
+import { useHelperStore } from '../stores/helper'
 import { useAudioStore } from '../stores/audio'
 
-const storeUI = useUIStore()
+const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
 const handleUIOptions = (e) => {
@@ -19,7 +19,7 @@ const handleUIOptions = (e) => {
 
     const handleClose = () => {
         storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
-        storeUI.ui.btnBox = 'close'
+        storeHelper.status.btnBox = 'close'
     }
 
     const toggleAudio = () => {

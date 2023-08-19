@@ -9,18 +9,18 @@ ul.uiStatus(@click.stop='handleUIStatus')
 <script setup>
 import UIStatusNumbers from './UIStatusNumbers.vue'
 import UIStatusEquips from './UIStatusEquips.vue'
-import { useUIStore } from '../stores/ui'
+import { useHelperStore } from '../stores/helper'
 import { useAudioStore } from '../stores/audio'
 
-const storeUI = useUIStore()
+const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
 const handleUIStatus = (e) => {
     const target = e.target
     const handleClose = () => {
         storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
-        storeUI.ui.btnBox = 'close'
-        storeUI.ui.isDefault = false
+        storeHelper.status.btnBox = 'close'
+        storeHelper.status.isDefault = false
     }
 
     if (target.tagName === 'UL') return

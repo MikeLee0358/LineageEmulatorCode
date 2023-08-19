@@ -7,11 +7,11 @@ ul.uiMagic(@click.stop='handleUIMagic')
 </template>
 
 <script setup>
-import { useUIStore } from '../stores/ui'
+import { useHelperStore } from '../stores/helper'
 import { useRoleStore } from '../stores/role'
 import { useAudioStore } from '../stores/audio'
 
-const storeUI = useUIStore()
+const storeHelper = useHelperStore()
 const storeRole = useRoleStore()
 const storeAudio = useAudioStore()
 
@@ -19,7 +19,7 @@ const handleUIMagic = (e) => {
     const target = e.target
     const handleClose = () => {
         storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
-        storeUI.ui.btnBox = 'close'
+        storeHelper.status.btnBox = 'close'
     }
 
     if (target.tagName === 'UL') return

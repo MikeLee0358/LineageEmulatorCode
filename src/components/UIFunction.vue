@@ -1,25 +1,25 @@
 <template lang="pug">
 ul.uiFunction(@click.stop='handleUiFunction')
     li.btnHelp
-        UIHelp(v-show="storeUI.ui.btnBox === 'btnHelp'")
+        UIHelp(v-show="storeHelper.status.btnBox === 'btnHelp'")
     li.btnRole
-        UIStatus(v-show="storeUI.ui.btnBox === 'btnRole' || storeUI.ui.isDefault")
+        UIStatus(v-show="storeHelper.status.btnBox === 'btnRole' || storeHelper.status.isDefault")
     li.btnMagic
-        UIMagic(v-show="storeUI.ui.btnBox === 'btnMagic'")
+        UIMagic(v-show="storeHelper.status.btnBox === 'btnMagic'")
     li.btnItem
-        UIItem(v-show="storeUI.ui.btnBox === 'btnItem'")
+        UIItem(v-show="storeHelper.status.btnBox === 'btnItem'")
     li.btnCommunity
-        UICommunity(v-show="storeUI.ui.btnBox === 'btnCommunity'")
+        UICommunity(v-show="storeHelper.status.btnBox === 'btnCommunity'")
     li.btnSetting
-        UIOptions(v-show="storeUI.ui.btnBox === 'btnSetting'")
+        UIOptions(v-show="storeHelper.status.btnBox === 'btnSetting'")
     li.btnLogout
-        UISystem(v-show="storeUI.ui.btnBox === 'btnLogout'")
+        UISystem(v-show="storeHelper.status.btnBox === 'btnLogout'")
 
 </template>
 
 <script setup>
 import { useAudioStore } from '../stores/audio'
-import { useUIStore } from '../stores/ui'
+import { useHelperStore } from '../stores/helper'
 import UIItem from './UIItem.vue'
 import UIHelp from './UIHelp.vue'
 import UIStatus from './UIStatus.vue'
@@ -28,14 +28,14 @@ import UISystem from './UISystem.vue'
 import UIOptions from './UIOptions.vue'
 import UICommunity from './UICommunity.vue'
 const storeAudio = useAudioStore()
-const storeUI = useUIStore()
+const storeHelper = useHelperStore()
 
 const handleUiFunction = (e) => {
     if (e.target.tagName === 'UL') return
 
     storeAudio.outer.clickToPlayAudio('UI/audio_itemsOpen.mp3')
-    storeUI.ui.btnBox = e.target.className
-    storeUI.ui.isDefault = false
+    storeHelper.status.btnBox = e.target.className
+    storeHelper.status.isDefault = false
 }
 </script>
 

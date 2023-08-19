@@ -8,16 +8,16 @@ figure.uiSystem(@click.stop='handleUISystem')
 
 <script setup>
 import { RouterLink } from 'vue-router'
-import { useUIStore } from '../stores/ui'
+import { useHelperStore } from '../stores/helper'
 import { useAudioStore } from '../stores/audio'
 
-const storeUI = useUIStore()
+const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
 const handleUISystem = (e) => {
     const target = e.target
     if (target.tagName === 'FIGURE') return
-    if (['cancel', 'close'].includes(target.className)) storeUI.ui.btnBox = 'close'
+    if (['cancel', 'close'].includes(target.className)) storeHelper.status.btnBox = 'close'
 
     storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
 }

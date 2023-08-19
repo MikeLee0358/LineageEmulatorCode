@@ -5,15 +5,15 @@ figure.uiItem(@click.stop='handleUIItem')
 
 <script setup>
 import { useAudioStore } from '../stores/audio'
-import { useUIStore } from '../stores/ui'
-const storeUI = useUIStore()
+import { useHelperStore } from '../stores/helper'
+const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
 const handleUIItem = (e) => {
     const target = e.target
     const handleClose = () => {
         storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
-        storeUI.ui.btnBox = 'close'
+        storeHelper.status.btnBox = 'close'
     }
     if (target.tagName === 'FIGURE') return
     if (target.className === 'close') return handleClose()
