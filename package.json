@@ -6,7 +6,7 @@
         "build": "vite build",
         "preview": "vite preview",
         "cypress:open": "cypress open",
-        "cypress:run firefox": "cypress run --headed --browser firefox",
+        "cypress:run": "cypress run",
         "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
         "format": "prettier --write ."
     },
