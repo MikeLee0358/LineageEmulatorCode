@@ -8,8 +8,8 @@ figure.uiSystem(@click.stop='handleUISystem')
 
 <script setup>
 import { RouterLink } from 'vue-router'
-import { useHelperStore } from '../stores/helper'
-import { useAudioStore } from '../stores/audio'
+import { useHelperStore } from '@/stores/helper'
+import { useAudioStore } from '@/stores/audio'
 
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
@@ -24,7 +24,7 @@ const handleUISystem = (e) => {
 </script>
 
 <style lang="scss" scoped>
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiSystem {
     position: absolute;
@@ -38,7 +38,7 @@ const handleUISystem = (e) => {
         inset: 1% 86.75% 95% 2.5%;
         opacity: 0;
 
-        background-image: url('../assets/UI/UI_close.webp');
+        background-image: url('@/assets/UI/UI_close.webp');
         @extend %backgroundCoverRound;
     }
 
@@ -46,7 +46,7 @@ const handleUISystem = (e) => {
         position: absolute;
         inset: 20.5% 31.75% 73.25% 43.5%;
 
-        background-image: url('../assets/UI/UI_restart.webp');
+        background-image: url('@/assets/UI/UI_restart.webp');
         @extend %backgroundCoverRound;
     }
 
@@ -54,7 +54,7 @@ const handleUISystem = (e) => {
         position: absolute;
         inset: 29.95% 35% 64.5% 47.25%;
 
-        background-image: url('../assets/UI/UI_quit.webp');
+        background-image: url('@/assets/UI/UI_quit.webp');
         @extend %backgroundCoverRound;
     }
 
@@ -62,7 +62,7 @@ const handleUISystem = (e) => {
         position: absolute;
         inset: 37.75% 29.25% 55.25% 44%;
 
-        background-image: url('../assets/UI/UI_cancel.webp');
+        background-image: url('@/assets/UI/UI_cancel.webp');
         @extend %backgroundCoverRound;
     }
 

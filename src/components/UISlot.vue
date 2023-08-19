@@ -9,11 +9,11 @@ section.uiSlot(@click.stop='handleClick')
 
 <script setup>
 import { onMounted, ref } from 'vue'
-import { useChatStore } from '../stores/chat'
-import { useRoleStore } from '../stores/role'
-import { useScrollStore } from '../stores/scroll'
+import { useChatStore } from '@/stores/chat'
+import { useRoleStore } from '@/stores/role'
+import { useScrollStore } from '@/stores/scroll'
 import { onBeforeRouteLeave } from 'vue-router'
-import dataSlot from '../data/dataSlot.json'
+import dataSlot from '@/data/dataSlot.json'
 const cssColor = ref('')
 const slotList = ref(dataSlot)
 const storeRole = useRoleStore()
@@ -79,7 +79,7 @@ onBeforeRouteLeave(() => document.removeEventListener('keydown', handleKeyboard)
 </script>
 
 <style lang="scss" scoped>
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiSlot {
     grid-area: uiSlot;

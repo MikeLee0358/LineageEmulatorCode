@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { reactive } from 'vue'
-import { useScrollStore } from './scroll'
-import { useAlgorithmStore } from './algorithm'
+import { useScrollStore } from '@/stores/scroll'
+import { useAlgorithmStore } from '@/stores/algorithm'
 
 export const useChatStore = defineStore('chat', () => {
     const storeScroll = useScrollStore()

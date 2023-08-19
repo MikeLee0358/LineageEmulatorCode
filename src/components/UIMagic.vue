@@ -7,9 +7,9 @@ ul.uiMagic(@click.stop='handleUIMagic')
 </template>
 
 <script setup>
-import { useHelperStore } from '../stores/helper'
-import { useRoleStore } from '../stores/role'
-import { useAudioStore } from '../stores/audio'
+import { useHelperStore } from '@/stores/helper'
+import { useRoleStore } from '@/stores/role'
+import { useAudioStore } from '@/stores/audio'
 
 const storeHelper = useHelperStore()
 const storeRole = useRoleStore()
@@ -28,7 +28,7 @@ const handleUIMagic = (e) => {
 </script>
 
 <style lang="scss" scope>
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiMagic {
     position: absolute;
@@ -42,7 +42,7 @@ const handleUIMagic = (e) => {
         inset: 1% 86.75% 94.75% 2.5%;
         opacity: 0;
 
-        background-image: url('../assets/UI/UI_close.webp');
+        background-image: url('@/assets/UI/UI_close.webp');
         @extend %backgroundCoverRound;
 
         &:hover,

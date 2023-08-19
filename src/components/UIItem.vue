@@ -4,8 +4,8 @@ figure.uiItem(@click.stop='handleUIItem')
 </template>
 
 <script setup>
-import { useAudioStore } from '../stores/audio'
-import { useHelperStore } from '../stores/helper'
+import { useAudioStore } from '@/stores/audio'
+import { useHelperStore } from '@/stores/helper'
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
@@ -21,7 +21,7 @@ const handleUIItem = (e) => {
 </script>
 
 <style lang="scss">
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiItem {
     position: absolute;
@@ -35,7 +35,7 @@ const handleUIItem = (e) => {
         inset: 1% 86.75% 94.75% 2.5%;
         opacity: 0;
 
-        background-image: url('../assets/UI/UI_close.webp');
+        background-image: url('@/assets/UI/UI_close.webp');
         @extend %backgroundCoverRound;
 
         &:hover,

@@ -4,7 +4,7 @@ ul.uiChat
 </template>
 
 <script setup>
-import { useChatStore } from '../stores/chat'
+import { useChatStore } from '@/stores/chat'
 const storeChat = useChatStore()
 </script>
 

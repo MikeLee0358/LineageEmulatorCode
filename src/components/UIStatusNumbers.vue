@@ -18,7 +18,7 @@ ul.uiStatusNumbers
 </template>
 
 <script setup>
-import { useRoleStore } from '../stores/role'
+import { useRoleStore } from '@/stores/role'
 
 const storeRole = useRoleStore()
 </script>

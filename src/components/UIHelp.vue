@@ -13,8 +13,8 @@ ul.uiHelp(@click.stop='handleUIHelp')
 </template>
 
 <script setup>
-import { useAudioStore } from '../stores/audio'
-import { useHelperStore } from '../stores/helper'
+import { useAudioStore } from '@/stores/audio'
+import { useHelperStore } from '@/stores/helper'
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
@@ -31,7 +31,7 @@ const handleUIHelp = (e) => {
 </script>
 
 <style lang="scss" scoped>
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiHelp {
     position: absolute;

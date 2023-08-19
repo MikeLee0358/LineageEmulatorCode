@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { reactive, computed } from 'vue'
-import { useKnightStore } from './knight'
+import { useKnightStore } from '@/stores/knight'
 import data from '@/data/dataRole.json'
 
 export const useRoleStore = defineStore('role', () => {

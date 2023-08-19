@@ -1,7 +1,7 @@
 import { reactive } from 'vue'
 import { defineStore } from 'pinia'
-import { useChatStore } from './chat'
-import { useAlgorithmStore } from '../stores/algorithm'
+import { useChatStore } from '@/stores/chat'
+import { useAlgorithmStore } from '@/stores/algorithm'
 
 export const useKnightStore = defineStore('knight', () => {
     const storeChat = useChatStore()

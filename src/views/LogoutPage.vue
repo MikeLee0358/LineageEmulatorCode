@@ -4,7 +4,7 @@ section.logoutPage
 </template>
 
 <script setup>
-import { useRoleStore } from '../stores/role'
+import { useRoleStore } from '@/stores/role'
 const storeRole = useRoleStore()
 const turnToLogin = () => {
     window.location.replace('https://mikelee0358.github.io/LineageEmulator/#/login')

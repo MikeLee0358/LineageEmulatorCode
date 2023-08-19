@@ -10,8 +10,8 @@ article.rolesPage
 
 <script setup>
 import { RouterLink, onBeforeRouteLeave } from 'vue-router'
-import { useRoleStore } from '../stores/role'
-import { useAudioStore } from '../stores/audio'
+import { useRoleStore } from '@/stores/role'
+import { useAudioStore } from '@/stores/audio'
 const storeAudio = useAudioStore()
 const storeRole = useRoleStore()
 
@@ -22,7 +22,7 @@ onBeforeRouteLeave((to) => {
 </script>
 
 <style lang="scss">
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .rolesPage {
     position: relative;
@@ -202,6 +202,7 @@ onBeforeRouteLeave((to) => {
 }
 
 @media screen and (max-width: 1367px) {
+
     //for mobile & ipad
     .rolesPage .background {
         opacity: 1;

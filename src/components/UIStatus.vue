@@ -7,10 +7,10 @@ ul.uiStatus(@click.stop='handleUIStatus')
 </template>
 
 <script setup>
-import UIStatusNumbers from './UIStatusNumbers.vue'
-import UIStatusEquips from './UIStatusEquips.vue'
-import { useHelperStore } from '../stores/helper'
-import { useAudioStore } from '../stores/audio'
+import UIStatusNumbers from '@/components/UIStatusNumbers.vue'
+import UIStatusEquips from '@/components/UIStatusEquips.vue'
+import { useHelperStore } from '@/stores/helper'
+import { useAudioStore } from '@/stores/audio'
 
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
@@ -29,7 +29,7 @@ const handleUIStatus = (e) => {
 </script>
 
 <style lang="scss" scoped>
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiStatus {
     position: absolute;

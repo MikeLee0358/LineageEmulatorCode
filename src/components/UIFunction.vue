@@ -18,15 +18,15 @@ ul.uiFunction(@click.stop='handleUiFunction')
 </template>
 
 <script setup>
-import { useAudioStore } from '../stores/audio'
-import { useHelperStore } from '../stores/helper'
-import UIItem from './UIItem.vue'
-import UIHelp from './UIHelp.vue'
-import UIStatus from './UIStatus.vue'
-import UIMagic from './UIMagic.vue'
-import UISystem from './UISystem.vue'
-import UIOptions from './UIOptions.vue'
-import UICommunity from './UICommunity.vue'
+import { useAudioStore } from '@/stores/audio'
+import { useHelperStore } from '@/stores/helper'
+import UIItem from '@/components/UIItem.vue'
+import UIHelp from '@/components/UIHelp.vue'
+import UIStatus from '@/components/UIStatus.vue'
+import UIMagic from '@/components/UIMagic.vue'
+import UISystem from '@/components/UISystem.vue'
+import UIOptions from '@/components/UIOptions.vue'
+import UICommunity from '@/components/UICommunity.vue'
 const storeAudio = useAudioStore()
 const storeHelper = useHelperStore()
 
@@ -40,7 +40,7 @@ const handleUiFunction = (e) => {
 </script>
 
 <style lang="scss" scoped>
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiFunction {
     grid-area: uiFunction;

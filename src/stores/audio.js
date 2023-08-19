@@ -1,7 +1,7 @@
 import { reactive } from 'vue'
 import { defineStore } from 'pinia'
-import { useRoleStore } from './role'
-import { useKnightStore } from './knight'
+import { useRoleStore } from '@/stores/role'
+import { useKnightStore } from '@/stores/knight'
 
 export const useAudioStore = defineStore('audio', () => {
     const storeRole = useRoleStore()

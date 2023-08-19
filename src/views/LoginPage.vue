@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <style lang="scss" scoped>
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .loginPage {
     position: relative;

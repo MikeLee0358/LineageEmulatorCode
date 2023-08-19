@@ -8,8 +8,8 @@ ul.uiOptions(@click.stop='handleUIOptions')
 </template>
 
 <script setup>
-import { useHelperStore } from '../stores/helper'
-import { useAudioStore } from '../stores/audio'
+import { useHelperStore } from '@/stores/helper'
+import { useAudioStore } from '@/stores/audio'
 
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
@@ -36,7 +36,7 @@ const handleUIOptions = (e) => {
 </script>
 
 <style lang="scss" scoped>
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiOptions {
     position: absolute;
@@ -71,7 +71,7 @@ const handleUIOptions = (e) => {
         inset: 1.25% 2.5% 95% 87.85%;
         opacity: 0;
 
-        background-image: url('../assets/UI/UI_close.webp');
+        background-image: url('@/assets/UI/UI_close.webp');
         @extend %backgroundCoverRound;
 
         &:hover,

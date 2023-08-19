@@ -5,10 +5,10 @@ ul.uiStatusEquips
 </template>
 
 <script setup>
-import { useRoleStore } from '../stores/role'
-import { useScrollStore } from '../stores/scroll'
-import { useKnightStore } from '../stores/knight'
-import { useAlgorithmStore } from '../stores/algorithm'
+import { useRoleStore } from '@/stores/role'
+import { useScrollStore } from '@/stores/scroll'
+import { useKnightStore } from '@/stores/knight'
+import { useAlgorithmStore } from '@/stores/algorithm'
 const storeRole = useRoleStore()
 const storeAlgorithm = useAlgorithmStore()
 const storeScroll = useScrollStore()
@@ -148,7 +148,7 @@ const getDataForAlgorithm = (equip, event) => {
 </script>
 
 <style lang="scss" scoped>
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiStatusEquips {
     position: absolute;

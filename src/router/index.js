@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import LoginPage from '../views/LoginPage.vue'
+import LoginPage from '@/views/LoginPage.vue'
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -13,17 +13,17 @@ const router = createRouter({
         {
             path: '/roles',
             name: 'roles',
-            component: () => import('../views/RolesPage.vue')
+            component: () => import('@/views/RolesPage.vue')
         },
         {
             path: '/logout',
             name: 'logout',
-            component: () => import('../views/LogoutPage.vue')
+            component: () => import('@/views/LogoutPage.vue')
         },
         {
             path: '/:gender(male|female)/:role(elf|mage|royal|knight|darkElf)',
             name: 'singlePlayer',
-            component: () => import('../views/SinglePlayer.vue')
+            component: () => import('@/views/SinglePlayer.vue')
         },
         { path: '/:pathMatch(.*)*', redirect: '/login' }
     ]

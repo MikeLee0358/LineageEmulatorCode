@@ -8,7 +8,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <style lang="scss">
-@use './scss/common.scss';
+@use '@/scss/common.scss';
 
 main {
     display: flex;

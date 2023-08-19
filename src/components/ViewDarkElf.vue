@@ -4,7 +4,7 @@ img.deathKnight(:src="storeRole.outer.getUrlForHashWhenProd('darkElf/img_deathKn
 </template>
 
 <script setup>
-import { useRoleStore } from '../stores/role'
+import { useRoleStore } from '@/stores/role'
 
 const storeRole = useRoleStore()
 </script>

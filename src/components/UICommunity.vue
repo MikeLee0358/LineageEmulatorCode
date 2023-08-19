@@ -5,8 +5,8 @@ ul.uiCommunity(@click.stop='handleUICommunity')
 </template>
 
 <script setup>
-import { useHelperStore } from '../stores/helper'
-import { useAudioStore } from '../stores/audio'
+import { useHelperStore } from '@/stores/helper'
+import { useAudioStore } from '@/stores/audio'
 
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
@@ -23,7 +23,7 @@ const handleUICommunity = (e) => {
 </script>
 
 <style lang="scss">
-@use '../scss/common.scss';
+@use '@/scss/common.scss';
 
 .uiCommunity {
     position: absolute;
@@ -37,7 +37,7 @@ const handleUICommunity = (e) => {
         inset: 1% 2.5% 94.75% 87.75%;
         opacity: 0;
 
-        background-image: url('../assets/UI/UI_close.webp');
+        background-image: url('@/assets/UI/UI_close.webp');
         @extend %backgroundCoverRound;
 
         &:hover,

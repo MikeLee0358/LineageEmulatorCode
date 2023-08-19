@@ -4,7 +4,7 @@ img(v-for='img in imgList' :key='img.id' :class='img.class' :src='storeRole.oute
 </template>
 
 <script setup>
-import { useRoleStore } from '../stores/role'
+import { useRoleStore } from '@/stores/role'
 
 const storeRole = useRoleStore()
 const imgList = [

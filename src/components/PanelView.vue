@@ -9,12 +9,12 @@ figure.panelView
 </template>
 
 <script setup>
-import { useRoleStore } from '../stores/role'
-import ViewMage from './ViewMage.vue'
-import ViewKnight from './ViewKnight.vue'
-import ViewRoyal from './ViewRoyal.vue'
-import ViewDarkElf from './ViewDarkElf.vue'
-import ViewElf from './ViewElf.vue'
+import { useRoleStore } from '@/stores/role'
+import ViewMage from '@/components/ViewMage.vue'
+import ViewKnight from '@/components/ViewKnight.vue'
+import ViewRoyal from '@/components/ViewRoyal.vue'
+import ViewDarkElf from '@/components/ViewDarkElf.vue'
+import ViewElf from '@/components/ViewElf.vue'
 
 const storeRole = useRoleStore()
 </script>

@@ -14,8 +14,8 @@ figure(:class='storeRole.outer.getGenderClass()' v-show='!storeKnight.status.isD
 </template>
 
 <script setup>
-import { useRoleStore } from '../stores/role'
-import { useKnightStore } from '../stores/knight'
+import { useRoleStore } from '@/stores/role'
+import { useKnightStore } from '@/stores/knight'
 const storeRole = useRoleStore()
 const storeKnight = useKnightStore()
 
@@ -79,7 +79,7 @@ if (storeRole.status.currentGender === 'male') storeKnight.outer.repeatTalkChatE
 
 .deathKnight {
     position: relative;
-    background-image: url('../assets/knight/knight_deathKnight.gif');
+    background-image: url('@/assets/knight/knight_deathKnight.gif');
     background-size: cover;
     background-repeat: round;
 

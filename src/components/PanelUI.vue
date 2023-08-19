@@ -8,11 +8,11 @@ section.panelUI
 </template>
 
 <script setup>
-import UIHp from './UIHp.vue'
-import UIChat from './UIChat.vue'
-import UISlot from './UISlot.vue'
-import UINumber from './UINumber.vue'
-import UIFunction from './UIFunction.vue'
+import UIHp from '@/components/UIHp.vue'
+import UIChat from '@/components/UIChat.vue'
+import UISlot from '@/components/UISlot.vue'
+import UINumber from '@/components/UINumber.vue'
+import UIFunction from '@/components/UIFunction.vue'
 </script>
 
 <style lang="scss">
