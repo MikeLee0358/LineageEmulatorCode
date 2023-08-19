@@ -2,7 +2,7 @@ describe('Test Function System', () => {
     beforeEach(() => {
         cy.login()
         // eslint-disable-next-line cypress/no-force
-        cy.get('.male.royal').click({force: true})
+        cy.get('.male.royal').click({ force: true })
     })
 
     it('Role Window works?', () => {

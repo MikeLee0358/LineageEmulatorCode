@@ -202,7 +202,6 @@ onBeforeRouteLeave((to) => {
 }
 
 @media screen and (max-width: 1367px) {
-
     //for mobile & ipad
     .rolesPage .background {
         opacity: 1;

@@ -131,20 +131,18 @@ const assignColorToEquipText = (index) => {
 }
 
 const getDataForAlgorithm = (equip, event) => {
-    //event parameter is used for when euqip was gone.
-    const updateEquipValue = () => setTimeout(() => (equip.value = storeAlgorithm.target.value), 0)
+    //event parameter is used for when equip was gone.
+    const updateEquipValue = () =>
+        setTimeout(() => (equip.value = storeAlgorithm.status.target.value), 0)
 
     if (equip.name === '點擊變身' && storeKnight.status.isDeathKnight) {
         storeKnight.outer.getGameChatEvent('toBeKnight')
     } else if (equip.name === '點擊變身' && !storeKnight.status.isDeathKnight)
         storeKnight.outer.getGameChatEvent('toBeDeathKnight')
 
-    storeAlgorithm.target.name = equip.name
-    storeAlgorithm.target.category = equip.category
-    storeAlgorithm.target.safetyValue = equip.safetyValue
-    storeAlgorithm.target.value = equip.value
+    storeAlgorithm.outer.updateStatus(equip)
 
-    storeAlgorithm.algorithmSystem(equip, event)
+    storeAlgorithm.outer.algorithmSystem(equip, event)
     updateEquipValue()
 }
 </script>

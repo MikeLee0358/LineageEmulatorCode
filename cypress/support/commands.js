@@ -27,5 +27,5 @@
 Cypress.Commands.add('login', () => {
     cy.visit('/login')
     cy.get('.login').click()
-    cy.url({timeout: 10000}).should('include', '/roles')
+    cy.url({ timeout: 10000 }).should('include', '/roles')
 })

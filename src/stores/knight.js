@@ -21,7 +21,7 @@ export const useKnightStore = defineStore('knight', () => {
                 //reset
                 status.isShowGameChat = false
                 status.isStopFunction = false
-                storeAlgorithm.dice.bonus = 0
+                storeAlgorithm.status.dice.bonus = 0
             }, second * 1000)
         }
     }
@@ -57,17 +57,17 @@ export const useKnightStore = defineStore('knight', () => {
                     break
 
                 case 'talk0':
-                    storeAlgorithm.dice.bonus = 50
+                    storeAlgorithm.status.dice.bonus = 50
                     status.chatMsg = '似乎有風圍圍繞在你的滑鼠'
                     break
 
                 case 'talk1':
-                    storeAlgorithm.dice.bonus = 25
+                    storeAlgorithm.status.dice.bonus = 25
                     status.chatMsg = '似乎有微風圍圍繞在你的滑鼠'
                     break
 
                 case 'talk2':
-                    storeAlgorithm.dice.bonus = -100
+                    storeAlgorithm.status.dice.bonus = -100
                     status.chatMsg = '似乎有詛咒圍圍繞在你的滑鼠'
                     break
 

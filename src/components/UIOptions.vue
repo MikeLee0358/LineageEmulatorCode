@@ -16,6 +16,7 @@ const storeAudio = useAudioStore()
 
 const handleUIOptions = (e) => {
     const target = e.target
+
     const handleClose = () => {
         storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
         storeUI.ui.btnBox = 'close'
@@ -24,7 +25,9 @@ const handleUIOptions = (e) => {
     const toggleAudio = () => {
         storeAudio.status.isOn = !storeAudio.status.isOn
 
-        storeAudio.status.isOn === true ? storeAudio.outer.playAudio() : storeAudio.outer.pauseAudio()
+        storeAudio.status.isOn === true
+            ? storeAudio.outer.playAudio()
+            : storeAudio.outer.pauseAudio()
     }
     if (target.tagName === 'UL') return
     if (target.className === 'music') toggleAudio()
