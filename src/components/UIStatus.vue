@@ -1,5 +1,5 @@
 <template lang="pug">
-ul.uiStatus(@click.stop='handleUIStatus')
+ul.uiStatus(@click.stop='handle_UIStatus')
     li.close
     UIStatusNumbers
     UIStatusEquips
@@ -15,16 +15,16 @@ import { useAudioStore } from '@/stores/audio'
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
-const handleUIStatus = (e) => {
+const handle_UIStatus = (e) => {
     const target = e.target
-    const handleClose = () => {
-        storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
+    const handle_Close = () => {
+        storeAudio.outer.click_ToPlayAudio('UI/audio_itemsClose.mp3')
         storeHelper.status.btnBox = 'close'
         storeHelper.status.isDefault = false
     }
 
     if (target.tagName === 'UL') return
-    if (target.className === 'close') handleClose()
+    if (target.className === 'close') handle_Close()
 }
 </script>
 

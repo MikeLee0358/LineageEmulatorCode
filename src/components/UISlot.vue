@@ -1,7 +1,7 @@
 <template lang="pug">
-section.uiSlot(@click.stop='handleClick')
+section.uiSlot(@click.stop='handle_Click')
     figure(v-for='slot in slotList' :key='slot.id' :class='slot.hotkey')
-        img(:src='storeRole.outer.getUrlForHashWhenProd(slot.src)')
+        img(:src='storeRole.outer.get_UrlForHashWhenProd(slot.src)')
         figcaption.slotInfo
             h1 {{ slot.name }}
             p {{ slot.description }}
@@ -20,25 +20,25 @@ const storeRole = useRoleStore()
 const storeChat = useChatStore()
 const storeScroll = useScrollStore()
 
-const handleClick = (e) => {
-    const getScrollClass = (e) => {
+const handle_Click = (e) => {
+    const get_ScrollClass = (e) => {
         if (e.target.tagName !== 'IMG') return
         return e.target.parentElement.classList[0] //F5 ~F12
     }
-    storeScroll.outer.clearClickScrollTimer()
-    handleScrollStateAndInfo(getScrollClass(e), true)
+    storeScroll.outer.clear_ClickScrollTimer()
+    handle_ScrollStateAndInfo(get_ScrollClass(e), true)
 }
-const handleKeyboard = (e) => {
+const handle_Keyboard = (e) => {
     e.preventDefault()
     e.stopPropagation()
-    storeScroll.outer.clearClickScrollTimer()
-    handleScrollStateAndInfo(e.key)
+    storeScroll.outer.clear_ClickScrollTimer()
+    handle_ScrollStateAndInfo(e.key)
 }
 
-const handleScrollStateAndInfo = (classOrKey, isRepeatState = false) => {
+const handle_ScrollStateAndInfo = (classOrKey, isRepeatState = false) => {
     //classOrKey required string F5 or F6 ... F12
     const uiSlots = Array.from(document.querySelector('.uiSlot').children)
-    const getCssColor = (imgUrlString) => {
+    const get_CssColor = (imgUrlString) => {
         //control primary colors to display text color through js logic
         const color = {
             grey: 'var(--color-grey)',
@@ -51,31 +51,31 @@ const handleScrollStateAndInfo = (classOrKey, isRepeatState = false) => {
         return (cssColor.value = color.white)
     }
     uiSlots.forEach((slot) => {
-        const handleSlotInfoOpacity = (value) => {
+        const handle_SlotInfoOpacity = (value) => {
             slot.lastElementChild.style.opacity = value
         }
-        const removeSlotClass = (className) => slot.classList.remove(className)
-        const addSlotClass = (className) => slot.classList.add(className)
+        const remove_SlotClass = (className) => slot.classList.remove(className)
+        const add_SlotClass = (className) => slot.classList.add(className)
 
-        removeSlotClass('active')
-        handleSlotInfoOpacity(0)
+        remove_SlotClass('active')
+        handle_SlotInfoOpacity(0)
 
         if (slot.className === classOrKey) {
             if (isRepeatState)
                 storeScroll.status.clickTimerId = setInterval(
-                    () => storeScroll.outer.changeScroll(classOrKey),
+                    () => storeScroll.outer.change_Scroll(classOrKey),
                     750
                 )
-            storeScroll.outer.changeScroll(classOrKey)
-            getCssColor(slot.firstChild.src)
-            addSlotClass('active')
-            handleSlotInfoOpacity(1)
-            storeChat.outer.updateChatScroll()
+            storeScroll.outer.change_Scroll(classOrKey)
+            get_CssColor(slot.firstChild.src)
+            add_SlotClass('active')
+            handle_SlotInfoOpacity(1)
+            storeChat.outer.update_ChatScroll()
         }
     })
 }
-onMounted(() => document.addEventListener('keydown', handleKeyboard))
-onBeforeRouteLeave(() => document.removeEventListener('keydown', handleKeyboard))
+onMounted(() => document.addEventListener('keydown', handle_Keyboard))
+onBeforeRouteLeave(() => document.removeEventListener('keydown', handle_Keyboard))
 </script>
 
 <style lang="scss" scoped>

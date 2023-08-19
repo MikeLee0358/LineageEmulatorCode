@@ -1,20 +1,20 @@
 <template lang="pug">
 ul.uiStatusNumbers
     ul.level
-        li.lv {{ storeRole.outer.currentData().basic.lv }}
-        li.exp {{ storeRole.outer.currentData().basic.exp }}
+        li.lv {{ storeRole.outer.current_Data().basic.lv }}
+        li.exp {{ storeRole.outer.current_Data().basic.exp }}
     ul.basic
-        li {{ storeRole.outer.currentData().basic.hp }}/{{ storeRole.outer.currentData().basic.hp }}
-        li {{ storeRole.outer.currentData().basic.mp }}/{{ storeRole.outer.currentData().basic.mp }}
-        li {{ storeRole.outer.getAC() }}
+        li {{ storeRole.outer.current_Data().basic.hp }}/{{ storeRole.outer.current_Data().basic.hp }}
+        li {{ storeRole.outer.current_Data().basic.mp }}/{{ storeRole.outer.current_Data().basic.mp }}
+        li {{ storeRole.outer.get_AC() }}
     ul.attributes
-        li {{ storeRole.outer.currentData().basic.str }}
-        li {{ storeRole.outer.currentData().basic.dex }}
-        li {{ storeRole.outer.currentData().basic.con }}
-        li {{ storeRole.outer.currentData().basic.int }}
-        li {{ storeRole.outer.currentData().basic.wis }}
-        li {{ storeRole.outer.currentData().basic.cha }}
-    li.er {{ storeRole.outer.getER() }}
+        li {{ storeRole.outer.current_Data().basic.str }}
+        li {{ storeRole.outer.current_Data().basic.dex }}
+        li {{ storeRole.outer.current_Data().basic.con }}
+        li {{ storeRole.outer.current_Data().basic.int }}
+        li {{ storeRole.outer.current_Data().basic.wis }}
+        li {{ storeRole.outer.current_Data().basic.cha }}
+    li.er {{ storeRole.outer.get_ER() }}
 </template>
 
 <script setup>

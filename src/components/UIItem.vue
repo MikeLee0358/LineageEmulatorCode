@@ -1,5 +1,5 @@
 <template lang="pug">
-figure.uiItem(@click.stop='handleUIItem')
+figure.uiItem(@click.stop='handle_UIItem')
     li.close
 </template>
 
@@ -9,14 +9,14 @@ import { useHelperStore } from '@/stores/helper'
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
-const handleUIItem = (e) => {
+const handle_UIItem = (e) => {
     const target = e.target
-    const handleClose = () => {
-        storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
+    const handle_Close = () => {
+        storeAudio.outer.click_ToPlayAudio('UI/audio_itemsClose.mp3')
         storeHelper.status.btnBox = 'close'
     }
     if (target.tagName === 'FIGURE') return
-    if (target.className === 'close') return handleClose()
+    if (target.className === 'close') return handle_Close()
 }
 </script>
 

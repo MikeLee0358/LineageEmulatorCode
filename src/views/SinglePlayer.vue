@@ -2,7 +2,7 @@
 article.singlePlayerContainer
     PanelView
     PanelUI
-    audio(autoplay loop :src='storeAudio.outer.getRoleAudioUrl()')
+    audio(autoplay loop :src='storeAudio.outer.get_RoleAudioUrl()')
 </template>
 
 <script setup>
@@ -26,10 +26,10 @@ const storeKnight = useKnightStore()
 onBeforeRouteLeave(() => {
     //reset to default
     storeKnight.status.isDeathKnight = false
-    storeKnight.outer.clearRepeatTalkChatEventTimer()
-    storeScroll.outer.clearClickScrollTimer()
+    storeKnight.outer.clear_RepeatTalkChatEventTimer()
+    storeScroll.outer.clear_ClickScrollTimer()
     storeScroll.status.targetScroll = null
-    storeChat.outer.cleanChat()
+    storeChat.outer.clean_Chat()
     storeHelper.status.btnBox = 'close'
     storeHelper.status.isDefault = true
 })
@@ -41,7 +41,7 @@ onBeforeRouteLeave(() => {
 .singlePlayerContainer {
     width: 100%;
     height: 100%;
-    background-image: v-bind('storeRole.outer.currentBackGround()');
+    background-image: v-bind('storeRole.outer.current_BackGround()');
 
     @extend %backgroundCoverRound;
     @extend %cursorPointer;

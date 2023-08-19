@@ -1,6 +1,6 @@
 <template lang="pug">
-figure(:class='storeRole.outer.getGenderClass()')
-img.deathKnight(:src="storeRole.outer.getUrlForHashWhenProd('darkElf/img_deathKnight.webp')")
+figure(:class='storeRole.outer.get_GenderClass()')
+img.deathKnight(:src="storeRole.outer.get_UrlForHashWhenProd('darkElf/img_deathKnight.webp')")
 </template>
 
 <script setup>
@@ -15,7 +15,7 @@ const storeRole = useRoleStore()
     top: 47.25%;
     left: 46.25%;
     width: 6%;
-    background-image: v-bind('storeRole.outer.getGifUrl()');
+    background-image: v-bind('storeRole.outer.get_GifUrl()');
     background-size: cover;
     background-repeat: round;
 

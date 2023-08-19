@@ -1,5 +1,5 @@
 <template lang="pug">
-ul.uiCommunity(@click.stop='handleUICommunity')
+ul.uiCommunity(@click.stop='handle_UICommunity')
     li.close
     li.content 未開放
 </template>
@@ -11,14 +11,14 @@ import { useAudioStore } from '@/stores/audio'
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
-const handleUICommunity = (e) => {
+const handle_UICommunity = (e) => {
     const target = e.target
-    const handleClose = () => {
-        storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
+    const handle_Close = () => {
+        storeAudio.outer.click_ToPlayAudio('UI/audio_itemsClose.mp3')
         storeHelper.status.btnBox = 'close'
     }
     if (target.tagName === 'UL') return
-    if (target.className === 'close') return handleClose()
+    if (target.className === 'close') return handle_Close()
 }
 </script>
 

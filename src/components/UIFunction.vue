@@ -1,5 +1,5 @@
 <template lang="pug">
-ul.uiFunction(@click.stop='handleUiFunction')
+ul.uiFunction(@click.stop='handle_UIFunction')
     li.btnHelp
         UIHelp(v-show="storeHelper.status.btnBox === 'btnHelp'")
     li.btnRole
@@ -30,10 +30,10 @@ import UICommunity from '@/components/UICommunity.vue'
 const storeAudio = useAudioStore()
 const storeHelper = useHelperStore()
 
-const handleUiFunction = (e) => {
+const handle_UIFunction = (e) => {
     if (e.target.tagName === 'UL') return
 
-    storeAudio.outer.clickToPlayAudio('UI/audio_itemsOpen.mp3')
+    storeAudio.outer.click_ToPlayAudio('UI/audio_itemsOpen.mp3')
     storeHelper.status.btnBox = e.target.className
     storeHelper.status.isDefault = false
 }

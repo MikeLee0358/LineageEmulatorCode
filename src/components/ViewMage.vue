@@ -1,6 +1,6 @@
 <template lang="pug">
-figure(:class='storeRole.outer.getGenderClass()')
-img(v-for='img in imgList' :key='img.id' :class='img.class' :src='storeRole.outer.getUrlForHashWhenProd(img.src)')
+figure(:class='storeRole.outer.get_GenderClass()')
+img(v-for='img in imgList' :key='img.id' :class='img.class' :src='storeRole.outer.get_UrlForHashWhenProd(img.src)')
 </template>
 
 <script setup>
@@ -115,7 +115,7 @@ const imgList = [
 .mage {
     position: relative;
     left: 47.25%;
-    background-image: v-bind('storeRole.outer.getGifUrl()');
+    background-image: v-bind('storeRole.outer.get_GifUrl()');
     background-size: cover;
     background-repeat: round;
 

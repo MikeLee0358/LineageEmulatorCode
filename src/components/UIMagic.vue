@@ -1,9 +1,9 @@
 <template lang="pug">
-ul.uiMagic(@click.stop='handleUIMagic')
+ul.uiMagic(@click.stop='handle_UIMagic')
     li.close
     ul.magicNumber
         li.magicPower 0
-        li.magicResist {{ storeRole.outer.getMR() }}
+        li.magicResist {{ storeRole.outer.get_MR() }}
 </template>
 
 <script setup>
@@ -15,15 +15,15 @@ const storeHelper = useHelperStore()
 const storeRole = useRoleStore()
 const storeAudio = useAudioStore()
 
-const handleUIMagic = (e) => {
+const handle_UIMagic = (e) => {
     const target = e.target
-    const handleClose = () => {
-        storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
+    const handle_Close = () => {
+        storeAudio.outer.click_ToPlayAudio('UI/audio_itemsClose.mp3')
         storeHelper.status.btnBox = 'close'
     }
 
     if (target.tagName === 'UL') return
-    if (target.className === 'close') handleClose()
+    if (target.className === 'close') handle_Close()
 }
 </script>
 

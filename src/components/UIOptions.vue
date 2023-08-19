@@ -1,9 +1,9 @@
 <template lang="pug">
-ul.uiOptions(@click.stop='handleUIOptions')
+ul.uiOptions(@click.stop='handle_UIOptions')
     li.close
     li 選項
     li.music 背景音效: 
-        span {{ storeAudio.outer.showTextBgm() }}
+        span {{ storeAudio.outer.show_OnOff() }}
 
 </template>
 
@@ -14,24 +14,24 @@ import { useAudioStore } from '@/stores/audio'
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
-const handleUIOptions = (e) => {
+const handle_UIOptions = (e) => {
     const target = e.target
 
-    const handleClose = () => {
-        storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
+    const handle_Close = () => {
+        storeAudio.outer.click_ToPlayAudio('UI/audio_itemsClose.mp3')
         storeHelper.status.btnBox = 'close'
     }
 
-    const toggleAudio = () => {
+    const toggle_Audio = () => {
         storeAudio.status.isOn = !storeAudio.status.isOn
 
         storeAudio.status.isOn === true
-            ? storeAudio.outer.playAudio()
-            : storeAudio.outer.pauseAudio()
+            ? storeAudio.outer.play_Audio()
+            : storeAudio.outer.pause_Audio()
     }
     if (target.tagName === 'UL') return
-    if (target.className === 'music') toggleAudio()
-    if (target.className === 'close') handleClose()
+    if (target.className === 'music') toggle_Audio()
+    if (target.className === 'close') handle_Close()
 }
 </script>
 

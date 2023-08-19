@@ -12,31 +12,31 @@ export const useAudioStore = defineStore('audio', () => {
     })
 
     const outer = {
-        clickToPlayAudio: (url) => {
-            const audio = new Audio(outer.getUrlForHashWhenProd(url))
+        click_ToPlayAudio: (url) => {
+            const audio = new Audio(outer.get_UrlForHashWhenProd(url))
             //Safari: have to set play() to turn on audio , not autoplay like firefox or chrome
             audio.play()
         },
-        playAudio: () => {
+        play_Audio: () => {
             const audio = document.querySelector('audio')
             if (status.isOn) audio.play()
         },
-        pauseAudio: () => {
+        pause_Audio: () => {
             const audio = document.querySelector('audio')
             if (status.isOn === false) audio.pause()
         },
-        getRoleAudioUrl: () => {
+        get_RoleAudioUrl: () => {
             if (storeKnight.status.isDeathKnight)
-                return outer.getUrlForHashWhenProd('knight/deathKnight_audio.mp3')
+                return outer.get_UrlForHashWhenProd('knight/deathKnight_audio.mp3')
             else
-                return outer.getUrlForHashWhenProd(
+                return outer.get_UrlForHashWhenProd(
                     `${storeRole.status.currentRole}/${storeRole.status.currentRole}_audio.mp3`
                 )
         },
-        getUrlForHashWhenProd: (name) => {
+        get_UrlForHashWhenProd: (name) => {
             return new URL(`/src/assets/${name}`, import.meta.url).href
         },
-        showTextBgm: () => {
+        show_OnOff: () => {
             return status.isOn ? '開' : '關'
         }
     }

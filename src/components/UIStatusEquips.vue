@@ -1,6 +1,6 @@
 <template lang="pug">
 ul.uiStatusEquips
-    li.equip(v-for='equip in storeRole.outer.currentData().equips' :key='equip.id' :class='equip.category' :style='{backgroundImage: `url(${storeRole.outer.getUrlForHashWhenProd(equip.src)})`}' @click.stop='getDataForAlgorithm(equip, $event)' :data-displayequipinfo='getEquipInfo(equip)')
+    li.equip(v-for='equip in storeRole.outer.current_Data().equips' :key='equip.id' :class='equip.category' :style='{backgroundImage: `url(${storeRole.outer.get_UrlForHashWhenProd(equip.src)})`}' @click.stop='get_DataForAlgorithm(equip, $event)' :data-displayequipinfo='get_EquipInfo(equip)')
 
 </template>
 
@@ -14,25 +14,25 @@ const storeAlgorithm = useAlgorithmStore()
 const storeScroll = useScrollStore()
 const storeKnight = useKnightStore()
 
-const changeCursor = () => {
+const change_Cursor = () => {
     if (storeScroll.status.targetScroll === null)
-        return `url(${storeRole.outer.getUrlForHashWhenProd('UI/UI_pointer.webp')}), auto`
-    else return `url(${storeRole.outer.getUrlForHashWhenProd('UI/UI_target.webp')}), auto`
+        return `url(${storeRole.outer.get_UrlForHashWhenProd('UI/UI_pointer.webp')}), auto`
+    else return `url(${storeRole.outer.get_UrlForHashWhenProd('UI/UI_target.webp')}), auto`
 }
-const getEquipInfo = (equip) => {
-    const showPlusOrMinus = (value) => (value >= 0 ? `+${value}` : value)
+const get_EquipInfo = (equip) => {
+    const show_PlusOrMinus = (value) => (value >= 0 ? `+${value}` : value)
 
-    const getName = () => {
-        const nameArmor = () => `${showPlusOrMinus(equip.value)} ${equip.name} (使用中)
-防禦 ${equip.armor}${showPlusOrMinus(equip.value)}`
+    const get_Name = () => {
+        const get_NameArmor = () => `${show_PlusOrMinus(equip.value)} ${equip.name} (使用中)
+防禦 ${equip.armor}${show_PlusOrMinus(equip.value)}`
 
-        const nameWeapon = () =>
-            `${showPlusOrMinus(equip.value)} ${equip.name} (揮舞)
-攻擊力 ${equip.attack.small}${showPlusOrMinus(equip.value)}/${equip.attack.large}${showPlusOrMinus(
-                equip.value
-            )}` + isTwoHandsWeapon()
+        const get_NameWeapon = () =>
+            `${show_PlusOrMinus(equip.value)} ${equip.name} (揮舞)
+攻擊力 ${equip.attack.small}${show_PlusOrMinus(equip.value)}/${
+                equip.attack.large
+            }${show_PlusOrMinus(equip.value)}` + get_IsTwoHandsWeapon()
 
-        const nameJewelry = () => {
+        const get_NameJewelry = () => {
             if (
                 storeRole.status.currentRole === 'knight' &&
                 storeRole.status.currentGender === 'male' &&
@@ -48,51 +48,51 @@ const getEquipInfo = (equip) => {
             else return `${equip.name} (使用中)`
         }
 
-        const isTwoHandsWeapon = () => (/雙手武器/.test(equip.grip) ? '\n  雙手武器' : '')
+        const get_IsTwoHandsWeapon = () => (/雙手武器/.test(equip.grip) ? '\n  雙手武器' : '')
 
-        if (equip.category === 'weapon') return nameWeapon()
-        else if (equip.category.includes('armor')) return nameArmor()
-        else if (equip.category.includes('jewelry')) return nameJewelry()
+        if (equip.category === 'weapon') return get_NameWeapon()
+        else if (equip.category.includes('armor')) return get_NameArmor()
+        else if (equip.category.includes('jewelry')) return get_NameJewelry()
     }
 
-    const getFeature = () => {
+    const get_Feature = () => {
         //Jewelries are not opened yet
-        const getFeatureText = () => {
-            const showMR = () => {
+        const get_FeatureText = () => {
+            const show_MR = () => {
                 if (equip.mr === undefined) return ''
 
                 if (/cloak/.test(equip.category)) {
-                    return showPlusOrMinus(equip.mr + equip.value * 2)
+                    return show_PlusOrMinus(equip.mr + equip.value * 2)
                 } else if (/helmet|bodyArmor/.test(equip.category)) {
-                    return showPlusOrMinus(equip.mr + equip.value)
+                    return show_PlusOrMinus(equip.mr + equip.value)
                 }
             }
             return `可使用職業:
 ${equip.occupation}
-  ${equip.feature} ${showMR()}`
+  ${equip.feature} ${show_MR()}`
         }
-        const getNonFeatureText = () => `可使用職業:
+        const get_NoneFeatureText = () => `可使用職業:
 ${equip.occupation}`
 
-        if (!equip.feature) return getNonFeatureText()
+        if (!equip.feature) return get_NoneFeatureText()
         if (equip.category.includes('jewelry')) return ''
-        return getFeatureText()
+        return get_FeatureText()
     }
 
-    const getMaterial = () => {
+    const get_Material = () => {
         //Jewelries are not opened yet
         if (equip.category.includes('jewelry')) return ''
         return `材質:${equip.material}
   重量 ${equip.weight}`
     }
 
-    return `${getName()}
-  ${getFeature()}
-  ${getMaterial()}`
+    return `${get_Name()}
+  ${get_Feature()}
+  ${get_Material()}`
 }
-const assignColorToEquipText = (index) => {
+const assign_ColorToEquipText = (index) => {
     const role = storeRole.status.currentRole
-    const equips = storeRole.outer.currentData().equips
+    const equips = storeRole.outer.current_Data().equips
 
     const listColor = {
         grey: 'var(--color-grey)',
@@ -115,7 +115,7 @@ const assignColorToEquipText = (index) => {
         { index: 11, armorType: 'boots' }
     ]
 
-    const handleColorToEquipText = ({ index, armorType }) => {
+    const handle_ColorToEquipText = ({ index, armorType }) => {
         if (equips[index].category.includes(armorType)) {
             switch (role) {
                 case 'royal':
@@ -127,23 +127,23 @@ const assignColorToEquipText = (index) => {
             }
         }
     }
-    return handleColorToEquipText(listArmorType[index])
+    return handle_ColorToEquipText(listArmorType[index])
 }
 
-const getDataForAlgorithm = (equip, event) => {
+const get_DataForAlgorithm = (equip, event) => {
     //event parameter is used for when equip was gone.
-    const updateEquipValue = () =>
+    const update_EquipValue = () =>
         setTimeout(() => (equip.value = storeAlgorithm.status.target.value), 0)
 
     if (equip.name === '點擊變身' && storeKnight.status.isDeathKnight) {
-        storeKnight.outer.getGameChatEvent('toBeKnight')
+        storeKnight.outer.get_GameChatEvent('toBeKnight')
     } else if (equip.name === '點擊變身' && !storeKnight.status.isDeathKnight)
-        storeKnight.outer.getGameChatEvent('toBeDeathKnight')
+        storeKnight.outer.get_GameChatEvent('toBeDeathKnight')
 
-    storeAlgorithm.outer.updateStatus(equip)
+    storeAlgorithm.outer.update_Status(equip)
 
-    storeAlgorithm.outer.algorithmSystem(equip, event)
-    updateEquipValue()
+    storeAlgorithm.outer.do_Algorithm(equip, event)
+    update_EquipValue()
 }
 </script>
 
@@ -156,7 +156,7 @@ const getDataForAlgorithm = (equip, event) => {
     z-index: 1; // to make equipInfo override tree img in mage role situation
 
     &:hover {
-        cursor: v-bind(changeCursor());
+        cursor: v-bind(change_Cursor());
     }
 
     .equip {
@@ -213,7 +213,7 @@ const getDataForAlgorithm = (equip, event) => {
 
             &.cloak {
                 &::after {
-                    color: v-bind(assignColorToEquipText(5));
+                    color: v-bind(assign_ColorToEquipText(5));
                 }
 
                 top: 31.5%;

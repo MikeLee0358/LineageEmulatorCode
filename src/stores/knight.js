@@ -16,7 +16,7 @@ export const useKnightStore = defineStore('knight', () => {
     })
 
     const inner = {
-        closeGameChatInSecond: (second) => {
+        close_GameChatInSecond: (second) => {
             setTimeout(() => {
                 //reset
                 status.isShowGameChat = false
@@ -26,7 +26,7 @@ export const useKnightStore = defineStore('knight', () => {
         }
     }
     const outer = {
-        getGameChatEvent: (chatEvent) => {
+        get_GameChatEvent: (chatEvent) => {
             const getArrayFull = (array, string) => {
                 let result = []
                 for (let i = 0; i < array.length; i++) {
@@ -115,16 +115,16 @@ export const useKnightStore = defineStore('knight', () => {
                     break
             }
             status.isShowGameChat = true
-            inner.closeGameChatInSecond(10)
+            inner.close_GameChatInSecond(10)
         },
-        repeatTalkChatEvent: (second) => {
+        repeat_TalkChatEvent: (second) => {
             const timerId = setInterval(() => {
                 let randomNum = Math.floor(Math.random() * 10)
-                outer.getGameChatEvent(`talk${randomNum}`)
+                outer.get_GameChatEvent(`talk${randomNum}`)
             }, second * 1000)
             status.timerId = timerId
         },
-        clearRepeatTalkChatEventTimer: () => {
+        clear_RepeatTalkChatEventTimer: () => {
             window.clearInterval(status.timerId)
         }
     }

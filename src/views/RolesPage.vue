@@ -4,8 +4,8 @@ article.rolesPage
     .linkContainer
         template(v-for="(gender, index) in ['male', 'female']" :key='index')
             template(v-for="(role, index) in ['elf', 'mage', 'royal', 'knight', 'darkElf']" :key='index')
-                RouterLink(:to='`/${gender}/${role}`' :class='`${gender} ${role}`' @click.stop="storeAudio.outer.clickToPlayAudio('UI/audio_click.mp3')")
-    audio(:src="storeAudio.outer.getUrlForHashWhenProd('login/rolesPage_audio.mp3')" autoplay loop)
+                RouterLink(:to='`/${gender}/${role}`' :class='`${gender} ${role}`' @click.stop="storeAudio.outer.click_ToPlayAudio('UI/audio_click.mp3')")
+    audio(:src="storeAudio.outer.get_UrlForHashWhenProd('login/rolesPage_audio.mp3')" autoplay loop)
 </template>
 
 <script setup>
@@ -202,7 +202,6 @@ onBeforeRouteLeave((to) => {
 }
 
 @media screen and (max-width: 1367px) {
-
     //for mobile & ipad
     .rolesPage .background {
         opacity: 1;

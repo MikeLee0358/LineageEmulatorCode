@@ -1,5 +1,5 @@
 <template lang="pug">
-ul.uiHelp(@click.stop='handleUIHelp')
+ul.uiHelp(@click.stop='handle_UIHelp')
     li.close
     li.textContainer
         h1.title Side project由來
@@ -18,15 +18,15 @@ import { useHelperStore } from '@/stores/helper'
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
-const handleUIHelp = (e) => {
+const handle_UIHelp = (e) => {
     const target = e.target
-    const handleClose = () => {
-        storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
+    const handle_Close = () => {
+        storeAudio.outer.click_ToPlayAudio('UI/audio_itemsClose.mp3')
         storeHelper.status.btnBox = 'close'
     }
 
     if (target.tagName === 'UL') return
-    if (target.className === 'close') handleClose()
+    if (target.className === 'close') handle_Close()
 }
 </script>
 

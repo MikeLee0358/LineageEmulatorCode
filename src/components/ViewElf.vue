@@ -1,5 +1,5 @@
 <template lang="pug">
-figure(:class='storeRole.outer.getGenderClass()')
+figure(:class='storeRole.outer.get_GenderClass()')
 </template>
 
 <script setup>
@@ -11,7 +11,7 @@ const storeRole = useRoleStore()
 <style lang="scss" scoped>
 .elf {
     position: relative;
-    background-image: v-bind('storeRole.outer.getGifUrl()');
+    background-image: v-bind('storeRole.outer.get_GifUrl()');
     background-size: cover;
     background-repeat: round;
 

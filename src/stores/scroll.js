@@ -8,7 +8,7 @@ export const useScrollStore = defineStore('scroll', () => {
     })
 
     const outer = {
-        changeScroll: (string) => {
+        change_Scroll: (string) => {
             switch (string) {
                 case 'F6':
                     status.targetScroll = 'whiteArmor'
@@ -38,20 +38,20 @@ export const useScrollStore = defineStore('scroll', () => {
                     break
             }
         },
-        isScrollType: (type) => {
-            return outer.getScrollType() === type
+        get_IsScrollType: (type) => {
+            return outer.get_ScrollType() === type
         },
-        getScrollType: () => {
+        get_ScrollType: () => {
             if (status.targetScroll === null) return
             const reg = /(white)|(cursed)|(blessed)/g
             return reg.exec(status.targetScroll)[0]
         },
-        getScrollEquipType: () => {
+        get_ScrollEquipType: () => {
             if (status.targetScroll === null) return
             const reg = /(Armor)|(Weapon)/g
             return reg.exec(status.targetScroll)[0].toLocaleLowerCase()
         },
-        clearClickScrollTimer: () => {
+        clear_ClickScrollTimer: () => {
             clearInterval(status.clickTimerId)
         }
     }

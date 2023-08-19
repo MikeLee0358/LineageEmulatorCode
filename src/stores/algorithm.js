@@ -27,19 +27,19 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
     })
 
     const inner = {
-        getDiceValue: () => {
+        get_DiceValue: () => {
             status.dice.value = Number((Math.random() * 100).toFixed(2))
         },
-        resetAtTheEnd: (value) => {
+        reset_AtTheEnd: (value) => {
             status.dice.state = value
             storeScroll.status.targetScroll = value
         },
-        getEquipGoneEffect: (equip, event) => {
+        get_EquipGoneEffect: (equip, event) => {
             let temporaryACbox = equip.armor
             let temporaryMRbox = equip.mr
             const toggleEquipHidden = () => event.target.classList.toggle('hidden')
 
-            storeRole.outer.calcEquipAttribute('minusAttribute', equip)
+            storeRole.outer.calc_EquipAttribute('minusAttribute', equip)
             toggleEquipHidden()
             equip.armor = 0
 
@@ -47,44 +47,44 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
                 toggleEquipHidden()
                 equip.armor = temporaryACbox
                 equip.mr = temporaryMRbox
-                storeRole.outer.calcEquipAttribute('plusAttribute', equip)
+                storeRole.outer.calc_EquipAttribute('plusAttribute', equip)
             }, 3000)
         },
-        handleFailure: (equip, event) => {
+        handle_Failure: (equip, event) => {
             if (Math.abs(status.target.value) === 9)
-                storeKnight.outer.getGameChatEvent('weaponFailure')
+                storeKnight.outer.get_GameChatEvent('weaponFailure')
 
             status.dice.state = 0
-            storeChat.outer.updateChatState()
+            storeChat.outer.update_ChatState()
             status.target.value = 0
-            inner.getEquipGoneEffect(equip, event)
-            inner.resetAtTheEnd(null)
+            inner.get_EquipGoneEffect(equip, event)
+            inner.reset_AtTheEnd(null)
         },
-        updateChatAndValue: (value) => {
-            const updateEquipValue = () => {
-                if (storeScroll.outer.isScrollType('cursed')) status.target.value--
+        update_ChatAndValue: (value) => {
+            const update_EquipValue = () => {
+                if (storeScroll.outer.get_IsScrollType('cursed')) status.target.value--
                 else status.target.value += status.dice.state
             }
 
-            inner.getRandomStateOneTo(value)
-            storeChat.outer.updateChatState()
-            updateEquipValue()
-            inner.resetAtTheEnd(null)
+            inner.get_RandomStateOneTo(value)
+            storeChat.outer.update_ChatState()
+            update_EquipValue()
+            inner.reset_AtTheEnd(null)
         },
-        getTargetCategoryEquipType: () => {
+        get_TargetCategoryEquipType: () => {
             if (status.target.category === null) return
             return status.target.category.substring(0, 6).toLowerCase().trim()
         },
-        getDiceSuccessValue: () => {
+        get_DiceSuccessValue: () => {
             const specialCases = () => {
                 /* example with Weapon Formula */
                 //white & blessed: -7 -8... successValue will be 33%, to prevent this situation happened return 100%
                 //cursed: when +6 up use cursedScroll successValue will be 33%, to prevent this situation happened return 100%
 
                 return (
-                    (storeScroll.outer.isScrollType('white') && status.target.value < 0) ||
-                    (storeScroll.outer.isScrollType('blessed') && status.target.value < 0) ||
-                    (storeScroll.outer.isScrollType('cursed') &&
+                    (storeScroll.outer.get_IsScrollType('white') && status.target.value < 0) ||
+                    (storeScroll.outer.get_IsScrollType('blessed') && status.target.value < 0) ||
+                    (storeScroll.outer.get_IsScrollType('cursed') &&
                         status.target.value >= Math.abs(status.target.safetyValue))
                 )
             }
@@ -120,13 +120,13 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
 
             if (specialCases()) return (status.dice.successValue = 100)
 
-            if (outer.isCategoryType('weapon')) getWeaponSuccessValue()
-            else if (outer.isCategoryType('armor')) getArmorSuccessValue()
+            if (outer.get_IsCategoryType('weapon')) getWeaponSuccessValue()
+            else if (outer.get_IsCategoryType('armor')) getArmorSuccessValue()
         },
-        getRandomStateOneTo: (num) => {
+        get_RandomStateOneTo: (num) => {
             return (status.dice.state = Number(Math.floor(Math.random() * num) + 1))
         },
-        updateChatAndValueOver9: (value) => {
+        update_ChatAndValueOver9: (value) => {
             //white: 33% +1 66%: nothing happened message
             //cursed: 50% +1 50%: nothing happened message
             //blessed: 66% +1 33%: nothing happened message
@@ -136,52 +136,52 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
 
             const isSuccessIn = (array) => array.includes(status.dice.state)
 
-            inner.getRandomStateOneTo(value) // status.dice.state : 1 ~ 6
+            inner.get_RandomStateOneTo(value) // status.dice.state : 1 ~ 6
 
-            if (storeScroll.outer.isScrollType('white') && isSuccessIn([1, 2])) {
+            if (storeScroll.outer.get_IsScrollType('white') && isSuccessIn([1, 2])) {
                 status.target.value++
                 status.dice.state = 1
-                storeKnight.outer.getGameChatEvent('weaponSuccess')
-            } else if (storeScroll.outer.isScrollType('cursed') && isSuccessIn([1, 2, 3])) {
+                storeKnight.outer.get_GameChatEvent('weaponSuccess')
+            } else if (storeScroll.outer.get_IsScrollType('cursed') && isSuccessIn([1, 2, 3])) {
                 status.target.value--
                 status.dice.state = 1
-                storeKnight.outer.getGameChatEvent('weaponSuccess')
-            } else if (storeScroll.outer.isScrollType('blessed') && isSuccessIn([1, 2, 3, 4])) {
+                storeKnight.outer.get_GameChatEvent('weaponSuccess')
+            } else if (storeScroll.outer.get_IsScrollType('blessed') && isSuccessIn([1, 2, 3, 4])) {
                 status.target.value++
                 status.dice.state = 1
-                storeKnight.outer.getGameChatEvent('weaponSuccess')
+                storeKnight.outer.get_GameChatEvent('weaponSuccess')
             } else {
                 //failure
                 status.dice.state = -1
-                storeKnight.outer.getGameChatEvent('weaponNope')
+                storeKnight.outer.get_GameChatEvent('weaponNope')
             }
 
-            storeChat.outer.updateChatState()
-            inner.resetAtTheEnd(null)
+            storeChat.outer.update_ChatState()
+            inner.reset_AtTheEnd(null)
         },
-        isSuccess: () => {
-            inner.getDiceValue()
-            inner.getDiceSuccessValue()
+        get_IsSuccess: () => {
+            inner.get_DiceValue()
+            inner.get_DiceSuccessValue()
 
             return status.dice.successValue >= status.dice.value
         },
-        isMatchedScrollEquipType: () => {
-            return storeScroll.outer.getScrollEquipType() === inner.getTargetCategoryEquipType()
+        get_IsMatchedScrollEquipType: () => {
+            return storeScroll.outer.get_ScrollEquipType() === inner.get_TargetCategoryEquipType()
         }
     }
 
     const outer = {
-        updateStatus: (equip) => {
+        update_Status: (equip) => {
             status.target.name = equip.name
             status.target.category = equip.category
             status.target.safetyValue = equip.safetyValue
             status.target.value = equip.value
         },
-        isCategoryType: (text) => {
+        get_IsCategoryType: (text) => {
             if (status.target.category === null || typeof text !== 'string') return
             return status.target.category.toLowerCase().includes(text.toLowerCase())
         },
-        algorithmSystem: (equip, event) => {
+        do_Algorithm: (equip, event) => {
             /* The idea is separate "Success Rate" and "Scroll Type" */
             //1. click a equip
             //2. handle Success Rate
@@ -191,28 +191,28 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
             //                   -> failure -> +0 & nothing happened message -> END
             //    ->  false -> END
             if (storeKnight.status.isStopFunction) return
-            if (!inner.isMatchedScrollEquipType()) return
+            if (!inner.get_IsMatchedScrollEquipType()) return
 
-            if (inner.isSuccess()) {
-                switch (storeScroll.outer.getScrollType()) {
+            if (inner.get_IsSuccess()) {
+                switch (storeScroll.outer.get_ScrollType()) {
                     case 'blessed':
-                        if (status.target.value < 3) return inner.updateChatAndValue(3)
-                        else if (status.target.value < 6) return inner.updateChatAndValue(2)
-                        else if (status.target.value < 9) return inner.updateChatAndValue(1)
-                        else inner.updateChatAndValueOver9(6)
+                        if (status.target.value < 3) return inner.update_ChatAndValue(3)
+                        else if (status.target.value < 6) return inner.update_ChatAndValue(2)
+                        else if (status.target.value < 9) return inner.update_ChatAndValue(1)
+                        else inner.update_ChatAndValueOver9(6)
                         break
 
                     case 'white':
-                        if (status.target.value < 9) return inner.updateChatAndValue(1)
-                        else inner.updateChatAndValueOver9(6)
+                        if (status.target.value < 9) return inner.update_ChatAndValue(1)
+                        else inner.update_ChatAndValueOver9(6)
                         break
 
                     case 'cursed':
-                        if (status.target.value > -9) return inner.updateChatAndValue(1)
-                        else inner.updateChatAndValueOver9(6)
+                        if (status.target.value > -9) return inner.update_ChatAndValue(1)
+                        else inner.update_ChatAndValueOver9(6)
                         break
                 }
-            } else inner.handleFailure(equip, event)
+            } else inner.handle_Failure(equip, event)
         }
     }
 

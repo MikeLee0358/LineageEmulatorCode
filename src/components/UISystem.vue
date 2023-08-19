@@ -1,5 +1,5 @@
 <template lang="pug">
-figure.uiSystem(@click.stop='handleUISystem')
+figure.uiSystem(@click.stop='handle_UISystem')
     li.close
     RouterLink.restart(to='/roles')
     RouterLink.quit(to='/logout')
@@ -14,12 +14,12 @@ import { useAudioStore } from '@/stores/audio'
 const storeHelper = useHelperStore()
 const storeAudio = useAudioStore()
 
-const handleUISystem = (e) => {
+const handle_UISystem = (e) => {
     const target = e.target
     if (target.tagName === 'FIGURE') return
     if (['cancel', 'close'].includes(target.className)) storeHelper.status.btnBox = 'close'
 
-    storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
+    storeAudio.outer.click_ToPlayAudio('UI/audio_itemsClose.mp3')
 }
 </script>
 
