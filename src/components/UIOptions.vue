@@ -3,29 +3,28 @@ ul.uiOptions(@click.stop='handleUIOptions')
     li.close
     li 選項
     li.music 背景音效: 
-        span {{ showTextBgm }}
+        span {{ storeAudio.outer.showTextBgm() }}
 
 </template>
 
 <script setup>
-import { computed } from 'vue'
 import { useUIStore } from '../stores/ui'
 import { useAudioStore } from '../stores/audio'
 
 const storeUI = useUIStore()
 const storeAudio = useAudioStore()
-const showTextBgm = computed(() => (storeAudio.state ? '開' : '關'))
 
 const handleUIOptions = (e) => {
     const target = e.target
     const handleClose = () => {
-        storeAudio.clickToPlayAudio('UI/audio_itemsClose.mp3')
+        storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
         storeUI.ui.btnBox = 'close'
     }
-    const toggleAudio = () => {
-        storeAudio.state = !storeAudio.state
 
-        storeAudio.state === true ? storeAudio.playAudio() : storeAudio.pauseAudio()
+    const toggleAudio = () => {
+        storeAudio.status.isOn = !storeAudio.status.isOn
+
+        storeAudio.status.isOn === true ? storeAudio.outer.playAudio() : storeAudio.outer.pauseAudio()
     }
     if (target.tagName === 'UL') return
     if (target.className === 'music') toggleAudio()

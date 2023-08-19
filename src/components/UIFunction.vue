@@ -33,7 +33,7 @@ const storeUI = useUIStore()
 const handleUiFunction = (e) => {
     if (e.target.tagName === 'UL') return
 
-    storeAudio.clickToPlayAudio('UI/audio_itemsOpen.mp3')
+    storeAudio.outer.clickToPlayAudio('UI/audio_itemsOpen.mp3')
     storeUI.ui.btnBox = e.target.className
     storeUI.ui.isDefault = false
 }

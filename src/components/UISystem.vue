@@ -19,7 +19,7 @@ const handleUISystem = (e) => {
     if (target.tagName === 'FIGURE') return
     if (['cancel', 'close'].includes(target.className)) storeUI.ui.btnBox = 'close'
 
-    storeAudio.clickToPlayAudio('UI/audio_itemsClose.mp3')
+    storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
 }
 </script>
 

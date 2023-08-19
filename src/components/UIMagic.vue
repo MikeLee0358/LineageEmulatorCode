@@ -18,7 +18,7 @@ const storeAudio = useAudioStore()
 const handleUIMagic = (e) => {
     const target = e.target
     const handleClose = () => {
-        storeAudio.clickToPlayAudio('UI/audio_itemsClose.mp3')
+        storeAudio.outer.clickToPlayAudio('UI/audio_itemsClose.mp3')
         storeUI.ui.btnBox = 'close'
     }
 

@@ -2,7 +2,7 @@
 article.singlePlayerContainer
     PanelView
     PanelUI
-    audio(autoplay loop :src='storeAudio.getRoleAudioUrl()')
+    audio(autoplay loop :src='storeAudio.outer.getRoleAudioUrl()')
 </template>
 
 <script setup>
