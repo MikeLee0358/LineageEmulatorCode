@@ -34,7 +34,7 @@ const handle_UIStatus = (e) => {
 .uiStatus {
     position: absolute;
     inset: -2216% 1359.3% 704.8% -2500%;
-    background-image: url('/src/assets/UI/UI_role.webp');
+    background-image: url('@/assets/UI/UI_role.webp');
     @extend %backgroundCoverRound;
 
     .close {
@@ -43,7 +43,7 @@ const handle_UIStatus = (e) => {
         z-index: 2;
         opacity: 0;
 
-        background-image: url('/src/assets/UI/UI_close.webp');
+        background-image: url('@/assets/UI/UI_close.webp');
         @extend %backgroundCoverRound;
 
         &:hover,

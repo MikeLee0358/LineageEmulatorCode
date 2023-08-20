@@ -30,7 +30,7 @@ const handle_UISystem = (e) => {
     position: absolute;
     inset: -2216% 0% 704.8% -1016.55%;
 
-    background-image: url('/src/assets/UI/UI_logout.webp');
+    background-image: url('@/assets/UI/UI_logout.webp');
     @extend %backgroundCoverRound;
 
     .close {

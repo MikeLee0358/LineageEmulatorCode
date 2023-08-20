@@ -58,7 +58,7 @@ onBeforeRouteLeave((to) => {
                     inset: -9% 0% 0% -58%;
                     width: 185%;
                     height: 79vh;
-                    background-image: url('/src/assets/login/rolesPage_elfMale.webp');
+                    background-image: url('@/assets/login/rolesPage_elfMale.webp');
                     @extend %keepImageSameRate;
                 }
             }
@@ -73,7 +73,7 @@ onBeforeRouteLeave((to) => {
                     inset: 0% 0% 0% -92%;
                     width: 249%;
                     height: 64.5vh;
-                    background-image: url('/src/assets/login/rolesPage_mageMale.webp');
+                    background-image: url('@/assets/login/rolesPage_mageMale.webp');
                     @extend %keepImageSameRate;
                 }
             }
@@ -87,7 +87,7 @@ onBeforeRouteLeave((to) => {
                     inset: 0% 0% 0% -0.25%;
                     width: 100%;
                     height: 87.75vh;
-                    background-image: url('/src/assets/login/rolesPage_royalMale.webp');
+                    background-image: url('@/assets/login/rolesPage_royalMale.webp');
                     @extend %keepImageSameRate;
                 }
             }
@@ -102,7 +102,7 @@ onBeforeRouteLeave((to) => {
                     inset: -10% 0% 0% -16.5%;
                     width: 223%;
                     height: 73.5vh;
-                    background-image: url('/src/assets/login/rolesPage_knightMale.webp');
+                    background-image: url('@/assets/login/rolesPage_knightMale.webp');
                     @extend %keepImageSameRate;
                 }
             }
@@ -117,7 +117,7 @@ onBeforeRouteLeave((to) => {
                     inset: 0% 0% 0% -69.5%;
                     height: 66.25vh;
                     width: 173%;
-                    background-image: url('/src/assets/login/rolesPage_darkElfMale.webp');
+                    background-image: url('@/assets/login/rolesPage_darkElfMale.webp');
                     @extend %keepImageSameRate;
                 }
             }
@@ -136,7 +136,7 @@ onBeforeRouteLeave((to) => {
                     inset: 0% 0% 0% -157%;
                     width: 396%;
                     height: 60.75vh;
-                    background-image: url('/src/assets/login/rolesPage_elfFemale.webp');
+                    background-image: url('@/assets/login/rolesPage_elfFemale.webp');
                     @extend %keepImageSameRate;
                 }
             }
@@ -150,7 +150,7 @@ onBeforeRouteLeave((to) => {
                     inset: -5.25% 0% 0% -29%;
                     width: 138%;
                     height: 66vh;
-                    background-image: url('/src/assets/login/rolesPage_mageFemale.webp');
+                    background-image: url('@/assets/login/rolesPage_mageFemale.webp');
                     @extend %keepImageSameRate;
                 }
             }
@@ -164,7 +164,7 @@ onBeforeRouteLeave((to) => {
                     inset: 0% 0% 0% -33%;
                     width: 179%;
                     height: 64vh;
-                    background-image: url('/src/assets/login/rolesPage_royalFemale.webp');
+                    background-image: url('@/assets/login/rolesPage_royalFemale.webp');
 
                     @extend %keepImageSameRate;
                 }
@@ -179,7 +179,7 @@ onBeforeRouteLeave((to) => {
                     inset: -2% 0% 0% -81%;
                     width: 231%;
                     height: 65.25vh;
-                    background-image: url('/src/assets/login/rolesPage_knightFemale.webp');
+                    background-image: url('@/assets/login/rolesPage_knightFemale.webp');
                     @extend %keepImageSameRate;
                 }
             }
@@ -193,7 +193,7 @@ onBeforeRouteLeave((to) => {
                     inset: 0% 0% 0% -172%;
                     width: 325%;
                     height: 61vh;
-                    background-image: url('/src/assets/login/rolesPage_darkElfFemale.webp');
+                    background-image: url('@/assets/login/rolesPage_darkElfFemale.webp');
                     @extend %keepImageSameRate;
                 }
             }
@@ -202,6 +202,7 @@ onBeforeRouteLeave((to) => {
 }
 
 @media screen and (max-width: 1367px) {
+
     //for mobile & ipad
     .rolesPage .background {
         opacity: 1;

@@ -38,14 +38,14 @@ const handle_UIHelp = (e) => {
     inset: -2216% 1252.3% 704.8% -2394%;
     display: flex;
     align-items: center;
-    background-image: url('/src/assets/UI/UI_template.webp');
+    background-image: url('@/assets/UI/UI_template.webp');
     @extend %backgroundCoverRound;
 
     .close {
         position: absolute;
         inset: 1.35% 2.75% 94.75% 88%;
 
-        background-image: url('/src/assets/UI/UI_close.webp');
+        background-image: url('@/assets/UI/UI_close.webp');
         @extend %backgroundCoverRound;
         opacity: 0;
 

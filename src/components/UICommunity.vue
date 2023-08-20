@@ -29,7 +29,7 @@ const handle_UICommunity = (e) => {
     position: absolute;
     inset: -2215% 1659.3% 703.8% -2800%;
 
-    background-image: url('/src/assets/UI/UI_template.webp');
+    background-image: url('@/assets/UI/UI_template.webp');
     @extend %backgroundCoverRound;
 
     .close {

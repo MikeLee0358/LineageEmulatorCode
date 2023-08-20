@@ -34,7 +34,7 @@ const handle_UIMagic = (e) => {
     position: absolute;
     inset: -2216% -430% 704.8% -629.4%;
 
-    background-image: url('/src/assets/UI/UI_magic.webp');
+    background-image: url('@/assets/UI/UI_magic.webp');
     @extend %backgroundCoverRound;
 
     .close {

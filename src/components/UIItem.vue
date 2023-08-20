@@ -27,7 +27,7 @@ const handle_UIItem = (e) => {
     position: absolute;
     inset: -2216% -324% 704.8% -735.4%;
 
-    background-image: url('/src/assets/UI/UI_items.webp');
+    background-image: url('@/assets/UI/UI_items.webp');
     @extend %backgroundCoverRound;
 
     .close {

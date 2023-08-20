@@ -107,7 +107,7 @@ onBeforeRouteLeave(() => document.removeEventListener('keydown', handle_Keyboard
 
     .active {
         opacity: 1;
-        background-image: url('/src/assets/slot/slot_empty.webp');
+        background-image: url('@/assets/slot/slot_empty.webp');
         @extend %backgroundCoverRound;
     }
 }

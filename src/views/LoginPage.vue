@@ -15,7 +15,7 @@ import { RouterLink } from 'vue-router'
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url('/src/assets/login/login_background.webp');
+    background-image: url('@/assets/login/login_background.webp');
     @extend %backgroundCoverRound;
 
     .login {
