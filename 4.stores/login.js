@@ -80,7 +80,6 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
                 /* example with Weapon Formula */
                 //white & blessed: -7 -8... successValue will be 33%, to prevent this situation happened return 100%
                 //cursed: when +6 up use cursedScroll successValue will be 33%, to prevent this situation happened return 100%
-
                 return (
                     (storeScroll.outer.get_IsScrollType('white') && status.target.value < 0) ||
                     (storeScroll.outer.get_IsScrollType('blessed') && status.target.value < 0) ||
@@ -133,7 +132,6 @@ export const useAlgorithmStore = defineStore('algorithm', () => {
             // status.dice.state:
             // -1: nothing happened msg
             //  1: +1 msg
-
             const isSuccessIn = (array) => array.includes(status.dice.state)
 
             inner.get_RandomStateOneTo(value) // status.dice.state : 1 ~ 6
